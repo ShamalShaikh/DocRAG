@@ -1,0 +1,6 @@
+langchain
+sentence-transformers
+chromadb
+numpy
+ollama
+pymupdf
