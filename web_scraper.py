@@ -165,14 +165,17 @@ class WebScraper:
         results = {}
         
         with ThreadPoolExecutor(max_workers=self.config.max_workers) as executor:
+            # Submit the scraping tasks to the executor
             future_to_url = {
                 executor.submit(self.scrape_html, url, parser): url
                 for url in urls
             }
-            
+            # Process the results as they complete
             for future in as_completed(future_to_url):
+                # Get the URL associated with the future
                 url = future_to_url[future]
                 try:
+                    # Get the result from the future
                     results[url] = future.result()
                 except Exception as e:
                     logger.error(f"Error scraping {url}: {str(e)}")
@@ -270,14 +273,16 @@ def create_default_scraper(
 if __name__ == "__main__":
     # Example usage
     urls_to_scrape = [
-        "https://example.com",
-        "https://example.org"
+        "https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/",
+        "https://shamalshaikh.github.io/ShamalBlog/posts/AI-Weekly-Digest/"
     ]
     
     scraper = create_default_scraper()
     
     # Example of parallel scraping
     results = scraper.scrape_urls_parallel(urls_to_scrape, example_html_parser)
+
+    print(results)
     
     # Example of scheduled scraping
     def scheduled_task(urls):

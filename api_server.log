@@ -1,0 +1,16 @@
+2025-02-19 08:46:14,084 - api_server - INFO - [api_server.py:67] - Successfully loaded configuration settings
+2025-02-19 08:46:14,084 - api_server - CRITICAL - [api_server.py:178] - Failed to start application: Cannot add middleware after an application has started
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 162, in startup_event
+    app.add_middleware(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/applications.py", line 130, in add_middleware
+    raise RuntimeError("Cannot add middleware after an application has started")
+RuntimeError: Cannot add middleware after an application has started
+2025-02-19 08:46:51,789 - api_server - INFO - [api_server.py:67] - Successfully loaded configuration settings
+2025-02-19 08:46:51,789 - api_server - CRITICAL - [api_server.py:178] - Failed to start application: Cannot add middleware after an application has started
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 162, in startup_event
+    app.add_middleware(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/applications.py", line 130, in add_middleware
+    raise RuntimeError("Cannot add middleware after an application has started")
+RuntimeError: Cannot add middleware after an application has started
