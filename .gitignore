@@ -1,0 +1,4 @@
+cache/
+chroma_db/
+__pycache__
+data/
