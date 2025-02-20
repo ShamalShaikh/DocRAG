@@ -50,7 +50,7 @@ class RetrievalQA:
     def __init__(
         self,
         storage_manager: StorageManager,
-        model_name: str = "deepseek-r1:8b",
+        model_name: str = "reader-lm:1.5b",
         max_tokens: int = 1000,
         temperature: float = 0.7,
         top_k: int = 3
@@ -173,9 +173,9 @@ Context from relevant documents:
             # Generate answer using LLM
             response = self.llm.generate(
                 model=self.model_name,
-                prompt=prompt,
-                temperature=self.temperature,
-                max_tokens=self.max_tokens
+                prompt=prompt
+                # temperature=self.temperature,
+                # max_tokens=self.max_tokens
             )
             
             # Create QA response
@@ -250,7 +250,7 @@ def create_retrieval_qa(
     """
     return RetrievalQA(
         storage_manager=storage_manager,
-        model_name=kwargs.get("model_name", "deepseek-r1:8b"),
+        model_name=kwargs.get("model_name", "reader-lm:1.5b"),
         max_tokens=kwargs.get("max_tokens", 1000),
         temperature=kwargs.get("temperature", 0.6),
         top_k=kwargs.get("top_k", 3)

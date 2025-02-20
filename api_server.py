@@ -11,6 +11,7 @@ import os
 from datetime import datetime
 from typing import Dict, List, Optional, Any
 from functools import lru_cache
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, Query, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
@@ -21,6 +22,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 from storage_indexing import create_storage_manager
 from retrieval_qa import create_retrieval_qa
 from web_scraper import create_default_scraper
+from html_to_markdown_converter import create_converter
 
 # Configure logging with more detailed format and file handler
 logging.basicConfig(
@@ -41,7 +43,9 @@ class Settings(BaseSettings):
     pinecone_api_key: str
     pinecone_environment: str
     pinecone_index_name: str = "rag-demo"
-    cors_origins: List[str] = ["*"]
+    pinecone_cloud: str = "aws"
+    pinecone_region: str = "us-east-1"
+    cors_origins: List[str] = ["http://localhost:8501", "http://localhost:3000", "http://127.0.0.1:8501"]
     debug_mode: bool = False
     log_level: str = "INFO"
     
@@ -51,25 +55,8 @@ class Settings(BaseSettings):
         case_sensitive=False
     )
 
-@lru_cache()
-def get_settings() -> Settings:
-    """
-    Get cached settings instance.
-    
-    Returns:
-        Settings: Application settings loaded from environment variables
-        
-    Raises:
-        ValueError: If required environment variables are missing
-    """
-    try:
-        settings = Settings()
-        logger.info("Successfully loaded configuration settings")
-        return settings
-    except Exception as e:
-        error_msg = f"Failed to load configuration settings: {str(e)}"
-        logger.critical(error_msg, exc_info=True)
-        raise ValueError(error_msg)
+# Create settings instance at module level
+settings = Settings()
 
 def initialize_components(settings: Settings):
     """
@@ -79,7 +66,7 @@ def initialize_components(settings: Settings):
         settings: Application settings
         
     Returns:
-        Tuple[StorageManager, RetrievalQA, WebScraper]: Initialized components
+        Tuple[StorageManager, RetrievalQA, WebScraper, HTMLToMarkdownConverter]: Initialized components
         
     Raises:
         RuntimeError: If component initialization fails
@@ -92,7 +79,9 @@ def initialize_components(settings: Settings):
             vector_db_type="pinecone",
             api_key=settings.pinecone_api_key,
             environment=settings.pinecone_environment,
-            index_name=settings.pinecone_index_name
+            index_name=settings.pinecone_index_name,
+            cloud=settings.pinecone_cloud,
+            region=settings.pinecone_region
         )
         components["storage_manager"] = storage_manager
         logger.info("Storage manager initialized successfully")
@@ -108,8 +97,14 @@ def initialize_components(settings: Settings):
         scraper = create_default_scraper()
         components["scraper"] = scraper
         logger.info("Web scraper initialized successfully")
+
+        # Initialize HTML to Markdown converter
+        logger.info("Initializing HTML to Markdown converter...")
+        converter = create_converter()
+        components["converter"] = converter
+        logger.info("HTML to Markdown converter initialized successfully")
         
-        return storage_manager, qa_system, scraper
+        return storage_manager, qa_system, scraper, converter
         
     except Exception as e:
         # Log which component failed to initialize
@@ -128,6 +123,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Add CORS middleware immediately after creating the app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.exception_handler(Exception)
 async def global_exception_handler(request, exc):
     """Global exception handler for unhandled errors."""
@@ -138,51 +142,37 @@ async def global_exception_handler(request, exc):
         content={"detail": error_msg}
     )
 
-# Add CORS middleware with configuration
-@app.on_event("startup")
-async def startup_event():
+# Replace on_event handlers with lifespan context manager
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     """
-    Configure application on startup.
-    
-    This function:
-    1. Configures logging based on settings
-    2. Sets up CORS middleware
-    3. Initializes system components
-    
-    Raises:
-        RuntimeError: If application startup fails
+    Lifespan context manager for FastAPI application.
+    Handles startup and shutdown events.
     """
     try:
-        settings = get_settings()
-        
-        # Configure logging level from settings
+        # Startup: Configure logging and initialize components
         logger.setLevel(getattr(logging, settings.log_level.upper()))
-        
-        # Configure CORS
-        app.add_middleware(
-            CORSMiddleware,
-            allow_origins=settings.cors_origins,
-            allow_credentials=True,
-            allow_methods=["*"],
-            allow_headers=["*"],
-        )
-        
-        # Initialize components
         logger.info("Starting application initialization...")
-        global storage_manager, qa_system, scraper
-        storage_manager, qa_system, scraper = initialize_components(settings)
+        global storage_manager, qa_system, scraper, converter
+        storage_manager, qa_system, scraper, converter = initialize_components(settings)
         logger.info("Application initialization completed successfully")
-        
+        yield
     except Exception as e:
         error_msg = f"Failed to start application: {str(e)}"
         logger.critical(error_msg, exc_info=True)
         raise RuntimeError(error_msg)
+    finally:
+        # Shutdown: Cleanup resources
+        logger.info("Shutting down application...")
+        # Add cleanup code here if needed
 
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Cleanup resources on application shutdown."""
-    logger.info("Shutting down application...")
-    # Add cleanup code here if needed
+# Update FastAPI app to use the lifespan context manager
+app = FastAPI(
+    title="RAG System API",
+    description="API for web scraping, document processing, and question answering",
+    version="1.0.0",
+    lifespan=lifespan
+)
 
 # Request/Response Models
 class ScrapingTarget(BaseModel):
@@ -226,28 +216,94 @@ class AnnotationResponse(BaseModel):
     annotation_id: Optional[str] = None
 
 # API Endpoints
+async def process_and_store_url(url: str, metadata: Optional[Dict[str, Any]] = None) -> str:
+    """
+    Process a URL through the complete pipeline: scrape → convert → store.
+    
+    Args:
+        url: URL to process
+        metadata: Optional metadata to store with the document
+        
+    Returns:
+        str: Document ID of the stored document
+        
+    Raises:
+        HTTPException: If any step in the pipeline fails
+    """
+    try:
+        # Step 1: Scrape HTML content
+        logger.info(f"Scraping content from URL: {url}")
+        html_content = await scraper.scrape_html(url)
+        if not html_content:
+            raise ValueError(f"No content retrieved from URL: {url}")
+            
+        # Step 2: Convert HTML to Markdown
+        logger.info("Converting HTML to Markdown")
+        conversion_result = converter.convert(html_content)
+        
+        # Step 3: Prepare metadata
+        doc_metadata = {
+            "url": url,
+            "processed_at": datetime.now().isoformat(),
+            **(metadata or {}),  # Include any provided metadata
+            **(conversion_result.get("metadata", {}))  # Include metadata from conversion
+        }
+        
+        # Remove any None values from metadata
+        doc_metadata = {k: v for k, v in doc_metadata.items() if v is not None}
+        
+        # Step 4: Store in vector database
+        logger.info("Storing document in vector database")
+        doc_id = storage_manager.process_and_store_document(
+            content=conversion_result["markdown"],
+            metadata=doc_metadata
+        )
+        
+        logger.info(f"Successfully stored document with ID: {doc_id}")
+        return doc_id
+        
+    except Exception as e:
+        error_msg = f"Failed to process URL {url}: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=error_msg
+        )
+
 @app.post("/api/scrape", response_model=ScrapingStatus)
 async def start_scraping(
-    target: ScrapingTarget,
-    settings: Settings = Depends(get_settings)
+    target: ScrapingTarget
 ):
     """
-    Start a web scraping job for the specified target.
+    Start a web scraping job for the specified target and store the processed content.
+    
+    This endpoint:
+    1. Initiates scraping of the target URL
+    2. Processes the HTML content to Markdown
+    3. Stores the document in the vector database
+    4. Optionally schedules recurring scraping
     
     Args:
         target: Scraping target configuration
-        settings: Application settings
         
     Returns:
         ScrapingStatus: Status of the created scraping job
         
     Raises:
-        HTTPException: If scraping fails
+        HTTPException: If scraping or processing fails
     """
     try:
         logger.info(f"Starting scraping job for URL: {target.url}")
         job_id = f"job_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         
+        # Process and store the document immediately
+        doc_id = await process_and_store_url(
+            url=str(target.url),
+            metadata=target.metadata
+        )
+        
+        # Schedule future scraping if requested
+        next_run = None
         if target.schedule:
             logger.info(f"Scheduling scraping job {job_id} with schedule: {target.schedule}")
             scraper.schedule_scraping(
@@ -256,18 +312,16 @@ async def start_scraping(
                 url=str(target.url)
             )
             next_run = datetime.now()
-        else:
-            logger.info(f"Starting immediate scraping job {job_id}")
-            next_run = None
         
         status = ScrapingStatus(
             job_id=job_id,
             url=target.url,
-            status="scheduled" if target.schedule else "started",
+            status="scheduled" if target.schedule else "completed",
             last_run=datetime.now(),
             next_run=next_run
         )
-        logger.info(f"Created scraping job: {status.dict()}")
+        
+        logger.info(f"Created scraping job: {status.dict()}, Document ID: {doc_id}")
         return status
         
     except Exception as e:
@@ -401,10 +455,9 @@ async def get_system_stats():
 
 if __name__ == "__main__":
     import uvicorn
-    settings = get_settings()
     uvicorn.run(
         app,
-        host="0.0.0.0",
+        host="127.0.0.1",
         port=8000,
-        debug=settings.debug_mode
+        reload=settings.debug_mode  # Changed debug to reload
     ) 

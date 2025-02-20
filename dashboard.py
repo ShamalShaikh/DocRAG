@@ -25,7 +25,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constants
-API_BASE_URL = "http://localhost:8000/api"
+API_BASE_URL = "http://127.0.0.1:8000/api"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 class RAGDashboard:

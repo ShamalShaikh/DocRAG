@@ -1,0 +1,15 @@
+2025-02-19 16:26:03,492 - storage_indexing - DEBUG - [storage_indexing.py:94] - Initializing PineconeDB with environment=shamal-env, index_name=rag-demo, namespace=
+2025-02-19 16:26:05,287 - storage_indexing - DEBUG - [storage_indexing.py:106] - Initializing Pinecone index with dimension=384
+2025-02-19 16:26:05,523 - storage_indexing - DEBUG - [storage_indexing.py:113] - Existing Pinecone indexes: ['rag-dem', 'rag-demo']
+2025-02-19 16:26:05,523 - storage_indexing - INFO - [storage_indexing.py:132] - Using existing Pinecone index: rag-demo
+2025-02-19 16:26:05,691 - storage_indexing - DEBUG - [storage_indexing.py:135] - Successfully initialized Pinecone index client: rag-demo
+2025-02-19 16:26:52,057 - storage_indexing - DEBUG - [storage_indexing.py:94] - Initializing PineconeDB with environment=shamal-env, index_name=rag-demo, namespace=
+2025-02-19 16:26:53,630 - storage_indexing - DEBUG - [storage_indexing.py:106] - Initializing Pinecone index with dimension=384
+2025-02-19 16:26:53,806 - storage_indexing - DEBUG - [storage_indexing.py:113] - Existing Pinecone indexes: ['rag-dem', 'rag-demo']
+2025-02-19 16:26:53,806 - storage_indexing - INFO - [storage_indexing.py:132] - Using existing Pinecone index: rag-demo
+2025-02-19 16:26:53,878 - storage_indexing - DEBUG - [storage_indexing.py:135] - Successfully initialized Pinecone index client: rag-demo
+2025-02-19 16:28:26,934 - storage_indexing - DEBUG - [storage_indexing.py:94] - Initializing PineconeDB with environment=shamal-env, index_name=rag-demo, namespace=
+2025-02-19 16:28:28,475 - storage_indexing - DEBUG - [storage_indexing.py:106] - Initializing Pinecone index with dimension=384
+2025-02-19 16:28:28,733 - storage_indexing - DEBUG - [storage_indexing.py:113] - Existing Pinecone indexes: ['rag-dem', 'rag-demo']
+2025-02-19 16:28:28,733 - storage_indexing - INFO - [storage_indexing.py:132] - Using existing Pinecone index: rag-demo
+2025-02-19 16:28:28,835 - storage_indexing - DEBUG - [storage_indexing.py:135] - Successfully initialized Pinecone index client: rag-demo

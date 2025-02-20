@@ -114,16 +114,29 @@ class WebScraper:
             logger.error(f"API request failed: {str(e)}")
             raise
             
-    def scrape_html(self, url: str, parser: Callable[[BeautifulSoup], Any]) -> Any:
+    def _default_parser(self, soup: BeautifulSoup) -> str:
+        """
+        Default parser that returns the raw HTML content.
+        
+        Args:
+            soup (BeautifulSoup): BeautifulSoup object of the HTML content
+            
+        Returns:
+            str: Raw HTML content
+        """
+        return str(soup)
+            
+    async def scrape_html(self, url: str, parser: Optional[Callable[[BeautifulSoup], Any]] = None) -> Any:
         """
         Scrape data from an HTML page using BeautifulSoup.
         
         Args:
             url (str): URL to scrape
-            parser (Callable): Function to parse the BeautifulSoup object
+            parser (Callable, optional): Function to parse the BeautifulSoup object.
+                                      If not provided, returns raw HTML content.
             
         Returns:
-            Any: Parsed data from the HTML
+            Any: Parsed data from the HTML, or raw HTML if no parser provided
             
         Raises:
             RequestException: If the HTTP request fails
@@ -138,6 +151,7 @@ class WebScraper:
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
+            parser = parser or self._default_parser
             return parser(soup)
             
         except RequestException as e:

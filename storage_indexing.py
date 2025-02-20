@@ -97,15 +97,22 @@ class PineconeDB(VectorDBInterface):
         
         # Create index if it doesn't exist
         if self.index_name not in pc.list_indexes().names():
+            logger.info(f"Creating new Pinecone index: {self.index_name}")
             pc.create_index(
                 name=self.index_name,
                 dimension=dimension,
                 metric="cosine",
-                spec=ServerlessSpec()  # Using serverless for better scalability
+                spec=ServerlessSpec(
+                    cloud="aws",
+                    region="us-east-1"
+                )
             )
+            logger.info(f"Successfully created Pinecone index: {self.index_name}")
+        else:
+            logger.info(f"Using existing Pinecone index: {self.index_name}")
             
         self.index = pc.Index(self.index_name)
-        logger.info(f"Initialized Pinecone index: {self.index_name}")
+        logger.info(f"Successfully initialized Pinecone index: {self.index_name}")
         
     def store(self, documents: List[Document]) -> bool:
         """
@@ -348,15 +355,26 @@ def create_storage_manager(
     Args:
         vector_db_type: Type of vector database to use
         **kwargs: Additional arguments for vector database initialization
+            - api_key: Pinecone API key
+            - environment: Pinecone environment
+            - index_name: Name of the Pinecone index
+            - namespace: Optional namespace (default: "")
+            - cloud: Cloud provider (default: "aws")
+            - region: Cloud region (default: "us-east-1")
+            - model_name: Name of the embedding model
+            - chunk_size: Size of text chunks for processing
         
     Returns:
         StorageManager: Configured storage manager instance
+        
+    Raises:
+        ValueError: If vector database type is not supported
     """
     if vector_db_type == "pinecone":
         vector_db = PineconeDB(
             api_key=kwargs.get("api_key"),
             environment=kwargs.get("environment"),
-            index_name=kwargs.get("index_name"),
+            index_name=kwargs.get("index_name", "rag-demo"),
             namespace=kwargs.get("namespace", "")
         )
     else:

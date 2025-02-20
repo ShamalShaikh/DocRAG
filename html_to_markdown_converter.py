@@ -54,7 +54,7 @@ class HTMLToMarkdownConverter:
     """
 
     def __init__(self, 
-                 model_name: str = "deepseek-r1:8b",
+                 model_name: str = "reader-lm:1.5b",
                  summary_threshold: int = 500,  # words
                  max_summary_length: int = 150):  # words
         """
@@ -160,20 +160,15 @@ class HTMLToMarkdownConverter:
             Markdown formatted string
         """
         try:
+            #TODO: Make this prompt stick to the topic, and be more robust and handle more edge cases. 
             prompt = f"""
-            Convert the following HTML to clean, well-formatted Markdown.
-            Preserve the document structure, links, and emphasis.
-            Remove any unnecessary formatting or styling.
+            1. Convert <h1> to # Heading, <h2> to ## Heading, <h3> to ### Heading, etc. Convert <p> to paragraphs, <ul> / <li> to bullet lists, <strong> to **bold**, and other HTML elements to their corresponding Markdown equivalents.
+            2. Important: Keep atleast one '#' for main heading, and atleast one '##' for subheadings in the result.
+            3. Note: Keep in mind that some HTML elements (like CSS classes or IDs) may not have direct Markdown equivalents. Also, do not wrap your result in triple backticks or code fences.
+            4. Don't leave any HTML tags in the result.
             
             HTML:
             {html}
-            
-            Instructions:
-            - Maintain heading hierarchy
-            - Preserve links and their text
-            - Keep lists and tables
-            - Remove unnecessary styling
-            - Ensure proper spacing
             """
 
             response = self.llm.generate(
@@ -183,7 +178,7 @@ class HTMLToMarkdownConverter:
             )
             
             markdown = response.response.strip()
-            logger.info("Successfully converted HTML to Markdown")
+            logger.info(f"Successfully converted HTML to Markdown: {markdown}")
             return markdown
 
         except Exception as e:
@@ -329,7 +324,7 @@ class HTMLToMarkdownConverter:
             logger.error(f"Error during conversion process: {str(e)}")
             raise
 
-def create_converter(model_name: str = "deepseek-r1:8b") -> HTMLToMarkdownConverter:
+def create_converter(model_name: str = "reader-lm:1.5b") -> HTMLToMarkdownConverter:
     """
     Factory function to create a converter instance with default settings.
 

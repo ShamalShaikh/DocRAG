@@ -1,0 +1,10 @@
+2025-02-19 16:26:53,905 - retrieval_qa - DEBUG - [retrieval_qa.py:83] - Initialized RetrievalQA with parameters:
+Model: reader-lm:1.5b
+Max tokens: 1000
+Temperature: 0.6
+Top K: 3
+2025-02-19 16:28:28,873 - retrieval_qa - DEBUG - [retrieval_qa.py:83] - Initialized RetrievalQA with parameters:
+Model: reader-lm:1.5b
+Max tokens: 1000
+Temperature: 0.6
+Top K: 3

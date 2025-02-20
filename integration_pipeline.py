@@ -34,7 +34,7 @@ class PipelineConfig:
     pinecone_api_key: str
     pinecone_environment: str
     pinecone_index_name: str = "rag-demo"
-    llm_model_name: str = "deepseek-r1:8b"
+    llm_model_name: str = "reader-lm:1.5b"
     chunk_size: int = 512
     max_tokens: int = 1000
     temperature: float = 0.7
@@ -170,6 +170,7 @@ class IntegrationPipeline:
             # Step 1: Fetch HTML content (async operation)
             logger.info(f"Fetching HTML content from {url}...")
             try:
+                # Use scrape_html without a parser to get raw HTML
                 html_content = await self.scraper.scrape_html(url)
                 if not html_content:
                     raise ValueError(f"No content retrieved from URL: {url}")
@@ -198,18 +199,24 @@ class IntegrationPipeline:
                     metadata={},
                     error=error_msg
                 )
-            
+            # conversion_result = {"markdown": "# Heading 1 \n ## Heading 2 \n ### Heading 3 \n\n This is a test of the markdown converter.", "metadata": {}}
             # Step 3: Store in vector database
             logger.info("Storing processed content...")
             try:
+                # Prepare metadata dictionary with None values converted to empty strings
+                metadata = {
+                    "url": url,
+                    "author": conversion_result["metadata"].get("author") or "",
+                    "publication_date": conversion_result["metadata"].get("publication_date") or "",
+                    "processed_at": datetime.now().isoformat()
+                }
+                
+                # Log the sanitized metadata for debugging
+                logger.debug(f"Sanitized metadata for storage: {metadata}")
+                
                 doc_id = self.storage_manager.process_and_store_document(
                     content=conversion_result["markdown"],
-                    metadata={
-                        "url": url,
-                        "author": conversion_result["metadata"].get("author"),
-                        "publication_date": conversion_result["metadata"].get("publication_date"),
-                        "processed_at": datetime.now().isoformat()
-                    }
+                    metadata=metadata
                 )
             except Exception as e:
                 error_msg = f"Failed to store document: {str(e)}"
@@ -325,7 +332,7 @@ def create_pipeline(
         pinecone_api_key=pinecone_api_key,
         pinecone_environment=pinecone_environment,
         pinecone_index_name=kwargs.get("pinecone_index_name", "rag-demo"),
-        llm_model_name=kwargs.get("llm_model_name", "deepseek-r1:8b"),
+        llm_model_name=kwargs.get("llm_model_name", "reader-lm:1.5b"),
         chunk_size=kwargs.get("chunk_size", 512),
         max_tokens=kwargs.get("max_tokens", 1000),
         temperature=kwargs.get("temperature", 0.7),

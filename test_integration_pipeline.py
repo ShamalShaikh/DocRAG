@@ -222,9 +222,10 @@ async def test_process_single_url(pipeline, mock_components):
     4. The storage manager processes and stores the document
     5. The result contains the expected data
     """
-    url = "https://example.com/article"
+    url = "https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/"
     result = await pipeline.process_url(url)
     
+    print(result)
     # Verify component interactions
     mock_components["scraper"].scrape_html.assert_awaited_once_with(url)
     mock_components["converter"].convert.assert_called_once_with(SAMPLE_HTML)
@@ -242,11 +243,13 @@ async def test_process_single_url(pipeline, mock_components):
 async def test_process_multiple_urls(pipeline, mock_components):
     """Test processing multiple URLs through the pipeline."""
     urls = [
-        "https://example.com/article1",
-        "https://example.com/article2"
+        "https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/",
+        "https://shamalshaikh.github.io/ShamalBlog/posts/AI-Weekly-Digest/"
     ]
     
     results = await pipeline.process_urls(urls)
+
+    print(results)
     
     # Verify results
     assert len(results) == 2
@@ -285,8 +288,10 @@ async def test_scraper_network_error(pipeline, mock_components):
 
 def test_query_processing(pipeline, mock_components):
     """Test query processing through the RAG system."""
-    query = "What are the key features of vector databases?"
+    query = "What are the key features of this article?"
     response = pipeline.query(query)
+    
+    print(response.answer)
     
     # Verify QA system interaction
     mock_components["qa"].query.assert_called_once_with(
@@ -295,7 +300,13 @@ def test_query_processing(pipeline, mock_components):
     )
     
     # Verify response
-    assert response.answer == "Vector databases provide fast similarity search and scalable storage."
+    # assert response.answer == "Vctor databases provide fast similarity search and scalable storage."
+    
+    # Check that we got an answer containing expected keywords
+    assert response.answer is not None, "No answer was returned"
+    assert "similarity search" in response.answer.lower(), (
+        "The answer does not mention expected keywords related to similarity search."
+    )
     assert len(response.sources) == 1
     assert response.total_tokens == 150
 

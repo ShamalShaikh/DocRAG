@@ -38,7 +38,7 @@ def generate_answer(query: str) -> str:
         # Get response from LLM
         logger.info("Sending request to Ollama")
         response = ollama.generate(
-            model="deepseek-r1:8b", 
+            model="reader-lm:1.5b", 
             prompt=prompt,
             options={
                 'temperature': 0.7,
