@@ -61,16 +61,16 @@ class MockVectorDB(VectorDBInterface):
         except Exception:
             return False
             
-    def query(self, query_embedding, top_k=5, filter_criteria=None):
-        # Simple mock implementation returning stored documents
-        results = []
-        for doc_id, doc in self.documents.items():
-            # Calculate mock similarity score (random for testing)
-            score = np.random.random()
-            results.append((doc, score))
-        
+    def query(self, query_embedding, top_k=3, filter_criteria=None):
+        """Mock query implementation."""
+        # Calculate cosine similarity
+        similarities = []
+        for doc in self.documents.values():
+            similarity = np.dot(query_embedding, doc.embedding)
+            similarities.append((doc, similarity))
+            
         # Sort by score and return top_k
-        results.sort(key=lambda x: x[1], reverse=True)
+        results = sorted(similarities, key=lambda x: x[1], reverse=True)
         return results[:top_k]
         
     def delete(self, document_ids: list[str]) -> bool:

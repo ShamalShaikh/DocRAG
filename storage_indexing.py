@@ -23,6 +23,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Constants
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Using a standard embedding model
+
 @dataclass
 class Document:
     """Data class representing a document with its content and metadata."""
@@ -155,7 +158,7 @@ class PineconeDB(VectorDBInterface):
     def query(
         self,
         query_embedding: np.ndarray,
-        top_k: int = 5,
+        top_k: int = 3,
         filter_criteria: Optional[Dict[str, Any]] = None
     ) -> List[Tuple[Document, float]]:
         """
@@ -232,7 +235,7 @@ class StorageManager:
     
     def __init__(
         self,
-        model_name: str = "all-MiniLM-L6-v2",
+        model_name: str = EMBEDDING_MODEL,
         vector_db: Optional[VectorDBInterface] = None,
         chunk_size: int = 512
     ):
@@ -244,7 +247,14 @@ class StorageManager:
             vector_db: Vector database implementation
             chunk_size: Maximum chunk size for text splitting
         """
-        self.model = SentenceTransformer(model_name)
+        try:
+            self.model = SentenceTransformer(model_name)
+            logger.info(f"Initialized embedding model: {model_name}")
+        except Exception as e:
+            error_msg = f"Failed to initialize embedding model: {str(e)}"
+            logger.error(error_msg)
+            raise RuntimeError(error_msg)
+            
         self.vector_db = vector_db
         self.chunk_size = chunk_size
         
@@ -318,7 +328,7 @@ class StorageManager:
     def query_similar_documents(
         self,
         query: str,
-        top_k: int = 5,
+        top_k: int = 3,
         filter_criteria: Optional[Dict[str, Any]] = None
     ) -> List[Tuple[Document, float]]:
         """
@@ -381,7 +391,7 @@ def create_storage_manager(
         raise ValueError(f"Unsupported vector database type: {vector_db_type}")
         
     return StorageManager(
-        model_name=kwargs.get("model_name", "all-MiniLM-L6-v2"),
+        model_name=kwargs.get("model_name", EMBEDDING_MODEL),
         vector_db=vector_db,
         chunk_size=kwargs.get("chunk_size", 512)
     )

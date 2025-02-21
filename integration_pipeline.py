@@ -18,7 +18,7 @@ from functools import lru_cache
 
 from web_scraper import create_default_scraper, WebScraper
 from html_to_markdown_converter import create_converter, HTMLToMarkdownConverter
-from storage_indexing import create_storage_manager, StorageManager
+from storage_indexing import create_storage_manager, StorageManager, EMBEDDING_MODEL
 from retrieval_qa import create_retrieval_qa, RetrievalQA, QAResponse
 
 # Configure logging
@@ -34,7 +34,9 @@ class PipelineConfig:
     pinecone_api_key: str
     pinecone_environment: str
     pinecone_index_name: str = "rag-demo"
-    llm_model_name: str = "reader-lm:1.5b"
+    groq_api_key: str
+    groq_model_name: str = "gemma2-9b-it"
+    embedding_model_name: str = EMBEDDING_MODEL
     chunk_size: int = 512
     max_tokens: int = 1000
     temperature: float = 0.7
@@ -43,11 +45,17 @@ class PipelineConfig:
 
     def __post_init__(self):
         """Validate configuration after initialization."""
-        if not self.test_mode and (self.pinecone_api_key == "test-key" or not self.pinecone_api_key):
-            raise ValueError(
-                "Invalid or missing Pinecone API key. "
-                "Please provide a valid API key or enable test_mode for testing."
-            )
+        if not self.test_mode:
+            if self.pinecone_api_key == "test-key" or not self.pinecone_api_key:
+                raise ValueError(
+                    "Invalid or missing Pinecone API key. "
+                    "Please provide a valid API key or enable test_mode for testing."
+                )
+            if not self.groq_api_key:
+                raise ValueError(
+                    "Invalid or missing Groq API key. "
+                    "Please provide a valid API key or enable test_mode for testing."
+                )
 
 @dataclass
 class ProcessingResult:
@@ -93,7 +101,7 @@ class IntegrationPipeline:
             # Initialize HTML to Markdown converter
             logger.info("Creating HTML to Markdown converter...")
             self.converter = create_converter(
-                model_name=config.llm_model_name
+                model_name=config.groq_model_name
             )
             
             # Initialize storage manager with test mode consideration
@@ -129,7 +137,7 @@ class IntegrationPipeline:
             else:
                 self.qa_system = create_retrieval_qa(
                     storage_manager=self.storage_manager,
-                    model_name=config.llm_model_name,
+                    model_name=config.groq_model_name,
                     max_tokens=config.max_tokens,
                     temperature=config.temperature,
                     top_k=config.top_k
@@ -315,6 +323,7 @@ class IntegrationPipeline:
 def create_pipeline(
     pinecone_api_key: str,
     pinecone_environment: str,
+    groq_api_key: str,
     **kwargs
 ) -> IntegrationPipeline:
     """
@@ -323,6 +332,7 @@ def create_pipeline(
     Args:
         pinecone_api_key: Pinecone API key
         pinecone_environment: Pinecone environment
+        groq_api_key: Groq API key
         **kwargs: Additional configuration options
         
     Returns:
@@ -331,8 +341,10 @@ def create_pipeline(
     config = PipelineConfig(
         pinecone_api_key=pinecone_api_key,
         pinecone_environment=pinecone_environment,
+        groq_api_key=groq_api_key,
         pinecone_index_name=kwargs.get("pinecone_index_name", "rag-demo"),
-        llm_model_name=kwargs.get("llm_model_name", "reader-lm:1.5b"),
+        groq_model_name=kwargs.get("groq_model_name", "gemma2-9b-it"),
+        embedding_model_name=kwargs.get("embedding_model_name", EMBEDDING_MODEL),
         chunk_size=kwargs.get("chunk_size", 512),
         max_tokens=kwargs.get("max_tokens", 1000),
         temperature=kwargs.get("temperature", 0.7),

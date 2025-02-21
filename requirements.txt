@@ -20,3 +20,5 @@ pinecone-client>=3.0.0  # For vector database operations
 streamlit>=1.32.0  # For dashboard UI
 plotly>=5.20.0  # For data visualization
 pandas>=2.2.0  # For data manipulation
+groq     # For Groq API integration
+python-dotenv>=1.0.0  # For environment variable management

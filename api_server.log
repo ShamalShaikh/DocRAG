@@ -671,3 +671,1541 @@ TypeError: create_default_scraper() got an unexpected keyword argument 'timeout'
 2025-02-19 21:40:06,668 - api_server - INFO - [api_server.py:391] - Query processed successfully. Total tokens: 2649
 2025-02-19 21:40:06,692 - api_server - INFO - [api_server.py:437] - Collecting system statistics
 2025-02-19 21:40:06,692 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:47:33,701 - api_server - INFO - [api_server.py:296] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/
+2025-02-19 21:47:33,701 - api_server - INFO - [api_server.py:235] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/
+2025-02-19 21:47:33,755 - api_server - INFO - [api_server.py:241] - Converting HTML to Markdown
+2025-02-19 21:47:44,769 - api_server - INFO - [api_server.py:256] - Storing document in vector database
+2025-02-19 21:47:45,569 - api_server - INFO - [api_server.py:262] - Successfully stored document with ID: doc_20250219_214744
+2025-02-19 21:47:45,572 - api_server - INFO - [api_server.py:324] - Created scraping job: {'job_id': 'job_20250219_214733', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 19, 21, 47, 45, 569637), 'next_run': None, 'error': None}, Document ID: doc_20250219_214744
+2025-02-19 21:47:45,590 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:47:45,590 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:47:53,245 - api_server - INFO - [api_server.py:296] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/
+2025-02-19 21:47:53,245 - api_server - INFO - [api_server.py:235] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/
+2025-02-19 21:47:53,283 - api_server - INFO - [api_server.py:241] - Converting HTML to Markdown
+2025-02-19 21:48:05,049 - api_server - INFO - [api_server.py:256] - Storing document in vector database
+2025-02-19 21:48:05,455 - api_server - INFO - [api_server.py:262] - Successfully stored document with ID: doc_20250219_214805
+2025-02-19 21:48:05,455 - api_server - INFO - [api_server.py:324] - Created scraping job: {'job_id': 'job_20250219_214753', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/Building-XCode2YCode/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 19, 21, 48, 5, 455515), 'next_run': None, 'error': None}, Document ID: doc_20250219_214805
+2025-02-19 21:48:05,465 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:48:05,465 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:48:39,718 - api_server - INFO - [api_server.py:296] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/XCode2YCode-Technical-Deep-Dive/
+2025-02-19 21:48:39,719 - api_server - INFO - [api_server.py:235] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/XCode2YCode-Technical-Deep-Dive/
+2025-02-19 21:48:39,759 - api_server - INFO - [api_server.py:241] - Converting HTML to Markdown
+2025-02-19 21:49:38,558 - api_server - INFO - [api_server.py:256] - Storing document in vector database
+2025-02-19 21:49:39,540 - api_server - INFO - [api_server.py:262] - Successfully stored document with ID: doc_20250219_214938
+2025-02-19 21:49:39,543 - api_server - INFO - [api_server.py:324] - Created scraping job: {'job_id': 'job_20250219_214839', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/XCode2YCode-Technical-Deep-Dive/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 19, 21, 49, 39, 540744), 'next_run': None, 'error': None}, Document ID: doc_20250219_214938
+2025-02-19 21:49:39,558 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:49:39,559 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:49:57,986 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:49:57,987 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:50:04,652 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:50:04,653 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 21:50:08,036 - api_server - INFO - [api_server.py:375] - Processing query: Describe something about LinkedinAgent
+2025-02-19 21:50:14,169 - api_server - INFO - [api_server.py:391] - Query processed successfully. Total tokens: 2140
+2025-02-19 21:50:14,335 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 21:50:14,336 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 22:01:23,690 - api_server - INFO - [api_server.py:437] - Collecting system statistics
+2025-02-19 22:01:23,691 - api_server - INFO - [api_server.py:445] - Statistics collected successfully
+2025-02-19 22:16:00,929 - api_server - INFO - [api_server.py:166] - Shutting down application...
+2025-02-19 22:46:18,381 - api_server - INFO - [api_server.py:155] - Starting application initialization...
+2025-02-19 22:46:18,381 - api_server - INFO - [api_server.py:77] - Initializing storage manager with Pinecone...
+2025-02-19 22:46:18,393 - api_server - ERROR - [api_server.py:116] - Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 78, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:46:18,396 - api_server - CRITICAL - [api_server.py:162] - Failed to start application: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 78, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 157, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 117, in initialize_components
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:46:18,397 - api_server - INFO - [api_server.py:166] - Shutting down application...
+2025-02-19 22:54:38,540 - api_server - INFO - [api_server.py:164] - Starting application initialization...
+2025-02-19 22:54:38,540 - api_server - INFO - [api_server.py:80] - Initializing storage manager with Pinecone...
+2025-02-19 22:54:38,553 - api_server - ERROR - [api_server.py:125] - Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 81, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:54:38,556 - api_server - CRITICAL - [api_server.py:171] - Failed to start application: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 81, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 166, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 126, in initialize_components
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:54:38,556 - api_server - INFO - [api_server.py:175] - Shutting down application...
+2025-02-19 22:59:50,301 - api_server - INFO - [api_server.py:164] - Starting application initialization...
+2025-02-19 22:59:50,301 - api_server - INFO - [api_server.py:80] - Initializing storage manager with Pinecone...
+2025-02-19 22:59:50,313 - api_server - ERROR - [api_server.py:125] - Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 81, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:59:50,316 - api_server - CRITICAL - [api_server.py:171] - Failed to start application: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: 'sentence-transformers/reader-lm:1.5b'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 81, in initialize_components
+    storage_manager = create_storage_manager(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 383, in create_storage_manager
+    return StorageManager(
+           ^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 247, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 320, in __init__
+    modules = self._load_auto_model(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 1538, in _load_auto_model
+    transformer_model = Transformer(
+                        ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 80, in __init__
+    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 121, in _load_config
+    find_adapter_config_file(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/peft_utils.py", line 88, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+                              ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/transformers/utils/hub.py", line 469, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 166, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 126, in initialize_components
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to initialize unknown: Incorrect path_or_model_id: 'sentence-transformers/reader-lm:1.5b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-02-19 22:59:50,317 - api_server - INFO - [api_server.py:175] - Shutting down application...
+2025-02-19 23:03:42,515 - api_server - INFO - [api_server.py:164] - Starting application initialization...
+2025-02-19 23:03:42,515 - api_server - INFO - [api_server.py:80] - Initializing storage manager with Pinecone...
+2025-02-19 23:03:45,943 - api_server - INFO - [api_server.py:90] - Storage manager initialized successfully
+2025-02-19 23:03:45,943 - api_server - INFO - [api_server.py:93] - Initializing QA system with Groq...
+2025-02-19 23:03:45,944 - api_server - ERROR - [api_server.py:125] - Failed to initialize unknown: Client.__init__() got an unexpected keyword argument 'proxies'
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 94, in initialize_components
+    qa_system = create_retrieval_qa(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 250, in create_retrieval_qa
+    return RetrievalQA(
+           ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 73, in __init__
+    self.llm = create_groq_client(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 149, in create_groq_client
+    return GroqClient(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 58, in __init__
+    self.client = Groq(api_key=self.api_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_client.py", line 95, in __init__
+    super().__init__(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 792, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-02-19 23:03:45,947 - api_server - CRITICAL - [api_server.py:171] - Failed to start application: Failed to initialize unknown: Client.__init__() got an unexpected keyword argument 'proxies'
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 94, in initialize_components
+    qa_system = create_retrieval_qa(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 250, in create_retrieval_qa
+    return RetrievalQA(
+           ^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 73, in __init__
+    self.llm = create_groq_client(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 149, in create_groq_client
+    return GroqClient(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 58, in __init__
+    self.client = Groq(api_key=self.api_key)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_client.py", line 95, in __init__
+    super().__init__(
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 792, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 166, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 126, in initialize_components
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to initialize unknown: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-02-19 23:03:45,948 - api_server - INFO - [api_server.py:175] - Shutting down application...
+2025-02-19 23:08:05,128 - api_server - INFO - [api_server.py:164] - Starting application initialization...
+2025-02-19 23:08:05,129 - api_server - INFO - [api_server.py:80] - Initializing storage manager with Pinecone...
+2025-02-19 23:08:08,529 - api_server - INFO - [api_server.py:90] - Storage manager initialized successfully
+2025-02-19 23:08:08,529 - api_server - INFO - [api_server.py:93] - Initializing QA system with Groq...
+2025-02-19 23:08:08,578 - api_server - INFO - [api_server.py:100] - QA system initialized successfully
+2025-02-19 23:08:08,578 - api_server - INFO - [api_server.py:103] - Initializing web scraper...
+2025-02-19 23:08:08,583 - api_server - INFO - [api_server.py:106] - Web scraper initialized successfully
+2025-02-19 23:08:08,584 - api_server - INFO - [api_server.py:109] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:08:08,604 - api_server - INFO - [api_server.py:114] - HTML to Markdown converter initialized successfully
+2025-02-19 23:08:08,604 - api_server - INFO - [api_server.py:167] - Application initialization completed successfully
+2025-02-19 23:08:25,885 - api_server - INFO - [api_server.py:487] - Vector database check passed
+2025-02-19 23:08:26,642 - api_server - INFO - [api_server.py:496] - Embedding model check passed
+2025-02-19 23:08:27,208 - api_server - INFO - [api_server.py:506] - LLM check passed
+2025-02-19 23:08:27,208 - api_server - INFO - [api_server.py:510] - Health check completed
+2025-02-19 23:08:27,216 - api_server - INFO - [api_server.py:446] - Collecting system statistics
+2025-02-19 23:08:27,217 - api_server - INFO - [api_server.py:454] - Statistics collected successfully
+2025-02-19 23:08:35,499 - api_server - INFO - [api_server.py:487] - Vector database check passed
+2025-02-19 23:08:35,703 - api_server - INFO - [api_server.py:496] - Embedding model check passed
+2025-02-19 23:08:35,959 - api_server - INFO - [api_server.py:506] - LLM check passed
+2025-02-19 23:08:35,959 - api_server - INFO - [api_server.py:510] - Health check completed
+2025-02-19 23:08:35,971 - api_server - INFO - [api_server.py:446] - Collecting system statistics
+2025-02-19 23:08:35,971 - api_server - INFO - [api_server.py:454] - Statistics collected successfully
+2025-02-19 23:08:39,559 - api_server - INFO - [api_server.py:487] - Vector database check passed
+2025-02-19 23:08:39,634 - api_server - INFO - [api_server.py:496] - Embedding model check passed
+2025-02-19 23:08:39,925 - api_server - INFO - [api_server.py:506] - LLM check passed
+2025-02-19 23:08:39,925 - api_server - INFO - [api_server.py:510] - Health check completed
+2025-02-19 23:08:39,932 - api_server - INFO - [api_server.py:305] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:08:39,932 - api_server - INFO - [api_server.py:244] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:08:40,183 - api_server - INFO - [api_server.py:250] - Converting HTML to Markdown
+2025-02-19 23:08:40,387 - api_server - ERROR - [api_server.py:276] - Failed to process URL https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 251, in process_and_store_url
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-19 23:08:40,394 - api_server - ERROR - [api_server.py:338] - Scraping failed: 500: Failed to process URL https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 251, in process_and_store_url
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 309, in start_scraping
+    doc_id = await process_and_store_url(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 277, in process_and_store_url
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Failed to process URL https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-19 23:08:40,407 - api_server - INFO - [api_server.py:446] - Collecting system statistics
+2025-02-19 23:08:40,407 - api_server - INFO - [api_server.py:454] - Statistics collected successfully
+2025-02-19 23:11:03,312 - api_server - INFO - [api_server.py:175] - Shutting down application...
+2025-02-19 23:11:05,836 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-19 23:11:05,836 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-19 23:11:08,682 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-19 23:11:08,683 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-19 23:11:08,725 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-19 23:11:08,725 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-19 23:11:08,730 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-19 23:11:08,730 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:11:08,748 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-19 23:11:08,748 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-19 23:11:32,609 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-19 23:11:34,799 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-19 23:11:34,799 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-19 23:11:37,233 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-19 23:11:37,233 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-19 23:11:37,280 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-19 23:11:37,280 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-19 23:11:37,282 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-19 23:11:37,282 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:11:37,301 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-19 23:11:37,301 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-19 23:11:55,390 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-19 23:11:57,687 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-19 23:11:57,687 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-19 23:12:00,506 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-19 23:12:00,507 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-19 23:12:00,553 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-19 23:12:00,553 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-19 23:12:00,555 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-19 23:12:00,555 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:12:00,573 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-19 23:12:00,574 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-19 23:12:15,055 - api_server - INFO - [api_server.py:529] - Vector database check passed
+2025-02-19 23:12:15,708 - api_server - INFO - [api_server.py:538] - Embedding model check passed
+2025-02-19 23:12:16,080 - api_server - INFO - [api_server.py:548] - LLM check passed
+2025-02-19 23:12:16,080 - api_server - INFO - [api_server.py:552] - Health check completed
+2025-02-19 23:12:16,086 - api_server - INFO - [api_server.py:309] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:12:16,087 - api_server - INFO - [api_server.py:315] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:12:16,166 - api_server - INFO - [api_server.py:321] - Converting HTML to Markdown
+2025-02-19 23:12:16,327 - api_server - ERROR - [api_server.py:372] - Processing failed: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-19 23:12:16,333 - api_server - ERROR - [api_server.py:380] - Scraping failed: cannot access local variable 'status' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 374, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+2025-02-19 23:12:16,335 - api_server - ERROR - [api_server.py:180] - Unhandled error: cannot access local variable 'status' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 374, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 382, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+2025-02-19 23:12:16,353 - api_server - INFO - [api_server.py:488] - Collecting system statistics
+2025-02-19 23:12:16,353 - api_server - INFO - [api_server.py:496] - Statistics collected successfully
+2025-02-19 23:12:30,930 - api_server - INFO - [api_server.py:529] - Vector database check passed
+2025-02-19 23:12:31,144 - api_server - INFO - [api_server.py:538] - Embedding model check passed
+2025-02-19 23:12:31,456 - api_server - INFO - [api_server.py:548] - LLM check passed
+2025-02-19 23:12:31,457 - api_server - INFO - [api_server.py:552] - Health check completed
+2025-02-19 23:12:31,470 - api_server - INFO - [api_server.py:309] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:12:31,470 - api_server - INFO - [api_server.py:315] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:12:31,527 - api_server - INFO - [api_server.py:321] - Converting HTML to Markdown
+2025-02-19 23:12:31,691 - api_server - ERROR - [api_server.py:372] - Processing failed: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-19 23:12:31,693 - api_server - ERROR - [api_server.py:380] - Scraping failed: cannot access local variable 'status' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 374, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+2025-02-19 23:12:31,699 - api_server - ERROR - [api_server.py:180] - Unhandled error: cannot access local variable 'status' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 288, in convert
+    conversion_result = self.llm.convert_html_to_markdown(cleaned_html)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 129, in convert_html_to_markdown
+    result = self.generate_text(prompt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 81, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 324, in start_scraping
+    conversion_result = converter.convert(html_content)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/html_to_markdown_converter.py", line 332, in convert
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to convert HTML to Markdown: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 7800, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 374, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 382, in start_scraping
+    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                ^^^^^^
+UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+2025-02-19 23:12:31,708 - api_server - INFO - [api_server.py:488] - Collecting system statistics
+2025-02-19 23:12:31,708 - api_server - INFO - [api_server.py:496] - Statistics collected successfully
+2025-02-19 23:15:59,584 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-19 23:16:02,124 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-19 23:16:02,124 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-19 23:16:04,664 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-19 23:16:04,664 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-19 23:16:04,698 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-19 23:16:04,698 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-19 23:16:04,703 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-19 23:16:04,704 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:16:04,720 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-19 23:16:04,720 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-19 23:16:29,346 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-19 23:16:32,456 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-19 23:16:32,456 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-19 23:16:36,299 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-19 23:16:36,300 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-19 23:16:36,358 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-19 23:16:36,359 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-19 23:16:36,361 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-19 23:16:36,361 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-19 23:16:36,380 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-19 23:16:36,380 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-19 23:24:17,578 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-19 23:24:18,355 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-19 23:24:19,035 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-19 23:24:19,035 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-19 23:24:19,041 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-19 23:24:19,041 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-19 23:24:32,210 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-19 23:24:32,404 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-19 23:24:32,666 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-19 23:24:32,667 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-19 23:24:32,687 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:24:32,687 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/DeepSeek-Innovation/
+2025-02-19 23:24:32,882 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-19 23:24:33,118 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-19 23:24:33,649 - api_server - ERROR - [api_server.py:389] - Processing failed: Failed to store document doc_20250219_232433
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 358, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 324, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250219_232433
+2025-02-19 23:24:33,651 - api_server - ERROR - [api_server.py:397] - Scraping failed: 500: Processing failed: Failed to store document doc_20250219_232433
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 358, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 324, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250219_232433
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 390, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250219_232433
+2025-02-19 23:24:33,661 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-19 23:24:33,661 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-19 23:38:25,950 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 17:48:55,116 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 17:48:55,116 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 17:48:58,103 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 17:48:58,103 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 17:48:58,103 - api_server - ERROR - [api_server.py:131] - Failed to initialize unknown: retrieval_qa.RetrievalQA() got multiple values for keyword argument 'model_name'
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 100, in initialize_components
+    qa_system = create_retrieval_qa(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 184, in create_retrieval_qa
+    return RetrievalQA(
+           ^^^^^^^^^^^^
+TypeError: retrieval_qa.RetrievalQA() got multiple values for keyword argument 'model_name'
+2025-02-20 17:48:58,103 - api_server - CRITICAL - [api_server.py:151] - Failed to start application: Failed to initialize unknown: retrieval_qa.RetrievalQA() got multiple values for keyword argument 'model_name'
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 100, in initialize_components
+    qa_system = create_retrieval_qa(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 184, in create_retrieval_qa
+    return RetrievalQA(
+           ^^^^^^^^^^^^
+TypeError: retrieval_qa.RetrievalQA() got multiple values for keyword argument 'model_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 146, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 132, in initialize_components
+    raise RuntimeError(error_msg)
+RuntimeError: Failed to initialize unknown: retrieval_qa.RetrievalQA() got multiple values for keyword argument 'model_name'
+2025-02-20 17:48:58,104 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 17:51:28,555 - api_server - INFO - [api_server.py:139] - Starting application initialization...
+2025-02-20 17:51:28,556 - api_server - CRITICAL - [api_server.py:146] - Failed to start application: cannot unpack non-iterable coroutine object
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 141, in lifespan
+    storage_manager, qa_system, scraper, converter = initialize_components(settings)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable coroutine object
+2025-02-20 17:51:28,556 - api_server - INFO - [api_server.py:150] - Shutting down application...
+2025-02-20 17:54:25,481 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 17:54:25,481 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 17:54:28,467 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 17:54:28,467 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 17:54:28,513 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 17:54:28,513 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 17:54:28,518 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 17:54:28,518 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 17:54:28,537 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 17:54:28,537 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 17:54:41,268 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 17:54:41,791 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 17:54:42,352 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 17:54:42,352 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 17:54:42,357 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 17:54:42,357 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 17:54:51,936 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 17:54:52,096 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 17:54:52,673 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 17:54:52,673 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 17:54:52,686 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-20 17:54:52,686 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-20 17:54:52,993 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 17:54:53,495 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 17:54:54,085 - api_server - ERROR - [api_server.py:389] - Processing failed: Failed to store document doc_20250220_175453
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 358, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 324, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250220_175453
+2025-02-20 17:54:54,087 - api_server - ERROR - [api_server.py:397] - Scraping failed: 500: Processing failed: Failed to store document doc_20250220_175453
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 358, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 324, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250220_175453
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 390, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250220_175453
+2025-02-20 17:54:54,095 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 17:54:54,095 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:07:54,456 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:07:56,967 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:07:56,967 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:07:59,128 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:07:59,128 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:07:59,161 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:07:59,161 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:07:59,166 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:07:59,166 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:07:59,182 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:07:59,182 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:08:06,373 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:08:06,886 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:08:07,346 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:08:07,346 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:08:07,360 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:08:07,360 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:08:19,180 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:08:19,294 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:08:19,533 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:08:19,533 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:08:19,546 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:08:19,546 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:08:23,356 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:08:23,555 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:08:23,851 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:08:23,852 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:08:23,860 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-20 18:08:23,860 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-20 18:08:24,035 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 18:08:24,294 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 18:08:24,625 - api_server - INFO - [api_server.py:363] - Successfully stored document with ID: doc_20250220_180824
+2025-02-20 18:08:24,626 - api_server - INFO - [api_server.py:384] - Created scraping job: {'job_id': 'job_20250220_180823', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 20, 18, 8, 24, 625499), 'next_run': None, 'error': None}, Document ID: doc_20250220_180824
+2025-02-20 18:08:24,630 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:08:24,630 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:08:38,568 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:08:38,699 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:08:38,953 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:08:38,954 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:08:38,966 - api_server - INFO - [api_server.py:443] - Processing query: describe FAST API
+2025-02-20 18:08:39,484 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 840
+2025-02-20 18:08:39,496 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:08:39,496 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:09:17,145 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:09:17,372 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:09:17,640 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:09:17,640 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:09:17,660 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://www.latent.space/p/2025-papers#%C2%A7section-prompting-icl-and-chain-of-thought
+2025-02-20 18:09:17,660 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://www.latent.space/p/2025-papers#%C2%A7section-prompting-icl-and-chain-of-thought
+2025-02-20 18:09:18,204 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 18:09:18,852 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 18:09:19,279 - api_server - INFO - [api_server.py:363] - Successfully stored document with ID: doc_20250220_180918
+2025-02-20 18:09:19,280 - api_server - INFO - [api_server.py:384] - Created scraping job: {'job_id': 'job_20250220_180917', 'url': HttpUrl('https://www.latent.space/p/2025-papers#%C2%A7section-prompting-icl-and-chain-of-thought'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 20, 18, 9, 19, 279574), 'next_run': None, 'error': None}, Document ID: doc_20250220_180918
+2025-02-20 18:09:19,288 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:09:19,289 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:09:27,321 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:09:27,637 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:09:27,894 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:09:27,894 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:09:27,910 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:09:27,910 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:09:52,292 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:09:52,396 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:09:52,621 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:09:52,622 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:09:52,631 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:09:52,632 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:10:09,173 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:10:09,240 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:10:11,743 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:10:11,744 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:10:11,756 - api_server - INFO - [api_server.py:443] - Processing query: Can you tell me some good reading material for prompting
+2025-02-20 18:10:13,189 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 4340
+2025-02-20 18:10:13,203 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:10:13,203 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:16:05,508 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:16:05,871 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:16:06,196 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:16:06,196 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:16:06,223 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:16:06,224 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:16:11,629 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:16:11,733 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:16:12,601 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:16:12,602 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:16:12,615 - api_server - INFO - [api_server.py:443] - Processing query: Can you tell me about RL
+2025-02-20 18:16:13,205 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 13623, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 234, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 178, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 13623, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:16:13,219 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:16:13,220 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:16:35,241 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:16:35,485 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:16:35,743 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:16:35,743 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:16:35,750 - api_server - INFO - [api_server.py:443] - Processing query: Can you tell me about Reinforcement Learning
+2025-02-20 18:16:36,238 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 855
+2025-02-20 18:16:36,256 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:16:36,256 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:16:56,849 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:16:56,939 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:16:57,228 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:16:57,228 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:16:57,241 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:16:57,241 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:19:18,440 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:19:18,714 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:19:18,989 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:19:18,990 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:19:19,000 - api_server - INFO - [api_server.py:443] - Processing query: Can you tell me about Reinforcement Learning
+2025-02-20 18:19:19,475 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 838
+2025-02-20 18:19:19,481 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:19:19,481 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:25:45,661 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:25:45,893 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:25:46,450 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:25:46,450 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:25:46,464 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://www.paulgraham.com/woke.html
+2025-02-20 18:25:46,464 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://www.paulgraham.com/woke.html
+2025-02-20 18:25:47,016 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 18:25:47,609 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 18:25:47,998 - api_server - INFO - [api_server.py:363] - Successfully stored document with ID: doc_20250220_182547
+2025-02-20 18:25:48,000 - api_server - INFO - [api_server.py:384] - Created scraping job: {'job_id': 'job_20250220_182546', 'url': HttpUrl('https://www.paulgraham.com/woke.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 20, 18, 25, 47, 998694), 'next_run': None, 'error': None}, Document ID: doc_20250220_182547
+2025-02-20 18:25:48,008 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:25:48,008 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:26:05,360 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:26:05,542 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:26:05,906 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:26:05,906 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:26:05,925 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://www.paulgraham.com/writes.html
+2025-02-20 18:26:05,926 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://www.paulgraham.com/writes.html
+2025-02-20 18:26:06,021 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 18:26:07,929 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 18:26:08,159 - api_server - INFO - [api_server.py:363] - Successfully stored document with ID: doc_20250220_182607
+2025-02-20 18:26:08,159 - api_server - INFO - [api_server.py:384] - Created scraping job: {'job_id': 'job_20250220_182605', 'url': HttpUrl('https://www.paulgraham.com/writes.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 20, 18, 26, 8, 159301), 'next_run': None, 'error': None}, Document ID: doc_20250220_182607
+2025-02-20 18:26:08,163 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:26:08,163 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:26:15,795 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:26:15,916 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:26:16,178 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:26:16,178 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:26:16,189 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:26:16,190 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:26:34,334 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:26:34,621 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:26:34,911 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:26:34,912 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:26:34,922 - api_server - INFO - [api_server.py:443] - Processing query: paul graham
+2025-02-20 18:26:35,522 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 234, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 178, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:26:35,531 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:26:35,531 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:26:48,048 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:26:48,163 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:26:48,710 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:26:48,711 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:26:48,720 - api_server - INFO - [api_server.py:443] - Processing query: paul graham
+2025-02-20 18:26:49,105 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 234, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 178, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:26:49,109 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:26:49,109 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:27:06,300 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:27:06,508 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:27:07,270 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:27:07,270 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:27:07,303 - api_server - INFO - [api_server.py:443] - Processing query: paul graham
+2025-02-20 18:27:07,858 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 234, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 178, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:27:07,871 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:27:07,871 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:27:10,605 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:27:10,721 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:27:11,049 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:27:11,049 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:27:11,057 - api_server - INFO - [api_server.py:443] - Processing query: paul graham
+2025-02-20 18:27:11,290 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 234, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 178, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24068, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:27:11,301 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:27:11,301 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:32:28,195 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:32:30,790 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:32:30,790 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:32:33,304 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:32:33,304 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:32:33,333 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:32:33,333 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:32:33,337 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:32:33,338 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:32:33,354 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:32:33,354 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:32:41,136 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:32:43,265 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:32:43,265 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:32:46,909 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:32:46,909 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:32:46,950 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:32:46,950 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:32:46,952 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:32:46,952 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:32:46,971 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:32:46,971 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:32:49,599 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:32:51,693 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:32:51,693 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:32:53,203 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:32:53,203 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:32:53,242 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:32:53,242 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:32:53,243 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:32:53,244 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:32:53,262 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:32:53,262 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:32:58,017 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:33:00,087 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:00,087 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:01,692 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:01,692 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:01,730 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:01,730 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:01,731 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:01,731 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:01,750 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:01,750 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:33:06,704 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:33:08,959 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:08,960 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:10,496 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:10,496 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:10,532 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:10,532 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:10,534 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:10,534 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:10,552 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:10,552 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:33:16,008 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:33:22,491 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:22,491 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:24,404 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:24,404 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:24,456 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:24,456 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:24,458 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:24,458 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:24,478 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:24,478 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:33:26,216 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:26,216 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:28,342 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:28,343 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:28,387 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:28,387 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:28,389 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:28,389 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:28,409 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:28,409 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:33:34,582 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:33:36,280 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:36,280 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:38,029 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:38,029 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:38,080 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:38,080 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:38,085 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:38,085 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:38,105 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:38,105 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:33:46,500 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:33:48,436 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:33:48,436 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:33:50,306 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:33:50,306 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:33:50,356 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:33:50,356 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:33:50,357 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:33:50,357 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:33:50,377 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:33:50,377 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:34:05,015 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:34:07,278 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:34:07,278 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:34:09,310 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:34:09,310 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:34:09,360 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:34:09,360 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:34:09,362 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:34:09,362 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:34:09,381 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:34:09,381 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:34:14,633 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:34:16,797 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:34:16,797 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:34:18,916 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:34:18,916 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:34:18,965 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:34:18,965 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:34:18,970 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:34:18,970 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:34:18,988 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:34:18,988 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:34:41,016 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:34:43,126 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:34:43,126 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:34:45,957 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:34:45,957 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:34:46,006 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:34:46,006 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:34:46,008 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:34:46,008 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:34:46,028 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:34:46,028 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:34:49,463 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:34:51,666 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:34:51,666 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:34:53,592 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:34:53,593 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:34:53,638 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:34:53,638 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:34:53,640 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:34:53,640 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:34:53,661 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:34:53,661 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:36:28,837 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:36:31,307 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:36:31,307 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:36:33,665 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:36:33,665 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:36:33,719 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:36:33,719 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:36:33,724 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:36:33,724 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:36:33,744 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:36:33,744 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:36:56,609 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:36:57,387 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:36:57,732 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:36:57,732 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:36:57,738 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:36:57,738 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:37:08,095 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:37:08,290 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:37:08,555 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:37:08,555 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:37:08,571 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:37:08,571 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:37:29,896 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:37:30,203 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:37:30,452 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:37:30,453 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:37:30,479 - api_server - INFO - [api_server.py:443] - Processing query: tell me about Paul graham
+2025-02-20 18:37:30,970 - api_server - ERROR - [api_server.py:464] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24070, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 444, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 235, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 179, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 24070, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-20 18:37:30,977 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:37:30,977 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:38:54,382 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-20 18:38:56,938 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-20 18:38:56,938 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-20 18:38:59,536 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-20 18:38:59,537 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-20 18:38:59,588 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-20 18:38:59,588 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-20 18:38:59,593 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-20 18:38:59,593 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-20 18:38:59,612 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-20 18:38:59,612 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-20 18:40:01,796 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:40:02,284 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:40:02,723 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:40:02,723 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:40:02,733 - api_server - INFO - [api_server.py:311] - Starting scraping job for URL: https://www.paulgraham.com/airbnbs.html
+2025-02-20 18:40:02,733 - api_server - INFO - [api_server.py:317] - Scraping content from URL: https://www.paulgraham.com/airbnbs.html
+2025-02-20 18:40:03,531 - api_server - INFO - [api_server.py:338] - Converting HTML to Markdown
+2025-02-20 18:40:06,108 - api_server - INFO - [api_server.py:355] - Storing document in vector database
+2025-02-20 18:40:06,918 - api_server - INFO - [api_server.py:363] - Successfully stored document with ID: doc_20250220_184006
+2025-02-20 18:40:06,918 - api_server - INFO - [api_server.py:384] - Created scraping job: {'job_id': 'job_20250220_184002', 'url': HttpUrl('https://www.paulgraham.com/airbnbs.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 20, 18, 40, 6, 918632), 'next_run': None, 'error': None}, Document ID: doc_20250220_184006
+2025-02-20 18:40:06,920 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:40:06,920 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-20 18:40:24,647 - api_server - INFO - [api_server.py:546] - Vector database check passed
+2025-02-20 18:40:24,988 - api_server - INFO - [api_server.py:555] - Embedding model check passed
+2025-02-20 18:40:25,209 - api_server - INFO - [api_server.py:565] - LLM check passed
+2025-02-20 18:40:25,209 - api_server - INFO - [api_server.py:569] - Health check completed
+2025-02-20 18:40:25,223 - api_server - INFO - [api_server.py:443] - Processing query: Tell me about Airbnbs
+2025-02-20 18:40:26,042 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 1681
+2025-02-20 18:40:26,053 - api_server - INFO - [api_server.py:505] - Collecting system statistics
+2025-02-20 18:40:26,053 - api_server - INFO - [api_server.py:513] - Statistics collected successfully

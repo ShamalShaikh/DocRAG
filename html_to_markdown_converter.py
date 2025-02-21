@@ -11,9 +11,8 @@ from typing import Dict, Any, List, Optional
 from datetime import datetime
 from bs4 import BeautifulSoup
 import json
-import requests
 from dataclasses import dataclass
-import ollama
+from groq_client import create_groq_client
 
 # Configure logging
 logging.basicConfig(
@@ -54,21 +53,21 @@ class HTMLToMarkdownConverter:
     """
 
     def __init__(self, 
-                 model_name: str = "reader-lm:1.5b",
+                 model_name: str = "gemma2-9b-it",
                  summary_threshold: int = 500,  # words
                  max_summary_length: int = 150):  # words
         """
         Initialize the converter with specified parameters.
 
         Args:
-            model_name: Name of the Ollama model to use
+            model_name: Name of the Groq model to use
             summary_threshold: Word count threshold for generating summaries
             max_summary_length: Maximum length of generated summaries in words
         """
         self.model_name = model_name
         self.summary_threshold = summary_threshold
         self.max_summary_length = max_summary_length
-        self.llm = ollama.Client()
+        self.llm = create_groq_client(model_name=model_name)
         logger.info(f"Initialized converter with model: {model_name}")
 
     def _clean_html(self, html: str) -> str:
@@ -262,74 +261,152 @@ class HTMLToMarkdownConverter:
 
     def convert(self, html: str) -> Dict[str, Any]:
         """
-        Convert HTML content to Markdown with enhanced metadata and analysis.
-
-        This method orchestrates the entire conversion process:
-        1. Cleans the HTML
-        2. Extracts metadata
-        3. Converts to Markdown
-        4. Generates summary if needed
-        5. Generates tags
-        6. Returns structured output
-
+        Convert HTML to Markdown with metadata extraction.
+        
         Args:
-            html: Raw HTML string to convert
-
+            html: HTML content to convert
+            
         Returns:
-            Dictionary containing converted content and metadata
-
+            Dictionary containing:
+            - markdown: Converted Markdown text
+            - metadata: Extracted metadata
+            - summary: Optional summary if content is long enough
+            - tags: Extracted tags/keywords
+            
         Raises:
-            ValueError: If input HTML is empty or invalid
-            Exception: For other conversion errors
+            ValueError: If HTML content is empty or invalid
+            RuntimeError: If conversion fails
         """
-        if not html:
-            raise ValueError("Input HTML cannot be empty")
-
+        if not html or not html.strip():
+            raise ValueError("HTML content cannot be empty")
+            
         try:
-            # Clean HTML and create soup object
+            # Clean HTML
             cleaned_html = self._clean_html(html)
+            
+            # Split content into smaller chunks if needed
             soup = BeautifulSoup(cleaned_html, 'html.parser')
-
-            # Extract metadata
+            
+            # Extract metadata first
             metadata = self._extract_metadata(soup)
+            
+            # Process content in chunks if it's too large
+            chunks = []
+            current_chunk = []
+            current_length = 0
+            max_chunk_length = 4000  # Keep chunks under 4000 tokens to stay within limits
+            
+            # Process each top-level element
+            for element in soup.find_all(recursive=False):
+                element_text = str(element)
+                element_length = len(element_text.split())
+                
+                if current_length + element_length > max_chunk_length:
+                    # Current chunk is full, process it
+                    if current_chunk:
+                        chunk_html = "".join(current_chunk)
+                        try:
+                            # Create a clear prompt for HTML to Markdown conversion
+                            prompt = f"""Convert the following HTML to clean, well-formatted Markdown.
+Follow these rules:
+1. Preserve headings, lists, links, and basic formatting
+2. Remove any unnecessary HTML attributes or styling
+3. Keep the document structure intact
+4. Use proper Markdown syntax for links, images, and formatting
 
-            # Convert to Markdown
-            markdown = self._convert_to_markdown(cleaned_html)
+HTML Content:
+{chunk_html}
 
+Convert the above HTML to Markdown format."""
+
+                            # Call Groq API with proper message formatting
+                            response = self.llm.generate_text(prompt)
+                            chunks.append(response["text"].strip())
+                        except Exception as e:
+                            logger.warning(f"Error converting chunk: {str(e)}")
+                            # Try to process the chunk with simpler conversion
+                            from html2text import HTML2Text
+                            h = HTML2Text()
+                            h.ignore_links = False
+                            chunks.append(h.handle(chunk_html))
+                    
+                    # Start new chunk
+                    current_chunk = [element_text]
+                    current_length = element_length
+                else:
+                    current_chunk.append(element_text)
+                    current_length += element_length
+            
+            # Process final chunk if any
+            if current_chunk:
+                chunk_html = "".join(current_chunk)
+                try:
+                    # Use the same prompt format for consistency
+                    prompt = f"""Convert the following HTML to clean, well-formatted Markdown.
+Follow these rules:
+1. Preserve headings, lists, links, and basic formatting
+2. Remove any unnecessary HTML attributes or styling
+3. Keep the document structure intact
+4. Use proper Markdown syntax for links, images, and formatting
+
+HTML Content:
+{chunk_html}
+
+Convert the above HTML to Markdown format."""
+
+                    response = self.llm.generate_text(prompt)
+                    chunks.append(response["text"].strip())
+                except Exception as e:
+                    logger.warning(f"Error converting final chunk: {str(e)}")
+                    # Try to process the chunk with simpler conversion
+                    from html2text import HTML2Text
+                    h = HTML2Text()
+                    h.ignore_links = False
+                    chunks.append(h.handle(chunk_html))
+            
+            # Combine all chunks
+            markdown_text = "\n\n".join(chunks)
+            
             # Calculate word count and reading time
-            word_count = len(markdown.split())
-            reading_time = max(1, round(word_count / 200))  # Assuming 200 words per minute
-
-            # Generate summary if content is long enough
-            summary = self._generate_summary(markdown)
-
-            # Generate tags
-            tags = self._generate_tags(markdown, metadata)
-
-            # Create result object
+            word_count = len(markdown_text.split())
+            reading_time = max(1, word_count // 200)  # Assume 200 words per minute
+            
+            # Create conversion result
             result = ConversionResult(
-                markdown=markdown,
-                author=metadata['author'],
-                publication_date=metadata['publication_date'],
-                summary=summary,
-                tags=tags,
+                markdown=markdown_text,
+                author=metadata.get("author"),
+                publication_date=metadata.get("date"),
+                summary=None,  # We'll generate this if needed
+                tags=[],  # We'll extract these if needed
                 word_count=word_count,
                 reading_time=reading_time
             )
+            
+            # Generate summary if content is long enough
+            if word_count > self.summary_threshold:
+                summary_prompt = f"""Generate a concise summary (max {self.max_summary_length} words) of the following text. Focus on the main points and key information:
 
-            logger.info("Successfully completed HTML to Markdown conversion")
+{markdown_text[:2000]}"""
+
+                try:
+                    summary_response = self.llm.generate_text(summary_prompt)
+                    result.summary = summary_response["text"].strip()
+                except Exception as e:
+                    logger.warning(f"Failed to generate summary: {str(e)}")
+            
             return result.to_dict()
-
+            
         except Exception as e:
-            logger.error(f"Error during conversion process: {str(e)}")
-            raise
+            error_msg = f"Failed to convert HTML to Markdown: {str(e)}"
+            logger.error(error_msg)
+            raise RuntimeError(error_msg)
 
-def create_converter(model_name: str = "reader-lm:1.5b") -> HTMLToMarkdownConverter:
+def create_converter(model_name: str = "gemma2-9b-it") -> HTMLToMarkdownConverter:
     """
     Factory function to create a converter instance with default settings.
 
     Args:
-        model_name: Name of the Ollama model to use
+        model_name: Name of the Groq model to use
 
     Returns:
         Configured HTMLToMarkdownConverter instance

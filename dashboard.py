@@ -7,6 +7,7 @@ including search functionality, visualization of results, and system management.
 
 import json
 import logging
+import os
 from datetime import datetime
 from typing import Dict, List, Optional
 
@@ -14,8 +15,12 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import requests
-import streamlit as st
 from sentence_transformers import SentenceTransformer
+import streamlit as st
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -26,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 # Constants
 API_BASE_URL = "http://127.0.0.1:8000/api"
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Using a standard embedding model
 
 class RAGDashboard:
     """
@@ -50,9 +55,26 @@ class RAGDashboard:
         # Initialize session state
         if "annotations" not in st.session_state:
             st.session_state.annotations = {}
+            
+        # Check for API key
+        if not os.getenv("GROQ_API_KEY"):
+            st.error(
+                "Groq API key not found. Please set the GROQ_API_KEY "
+                "environment variable."
+            )
+            st.stop()
         
         # Initialize embedding model for visualization
-        self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
+        try:
+            self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
+            logger.info(f"Initialized embedding model: {EMBEDDING_MODEL}")
+        except Exception as e:
+            logger.error(f"Failed to initialize embedding model: {str(e)}")
+            st.error(
+                "Failed to initialize embedding model. Please check your "
+                "internet connection and try again."
+            )
+            st.stop()
         
     def render_header(self):
         """Render the dashboard header."""
@@ -64,6 +86,22 @@ class RAGDashboard:
         - Visualize document embeddings
         - Add annotations to documents
         """)
+        
+        # Display system info
+        with st.expander("System Information"):
+            st.markdown(f"""
+            - **Embedding Model**: {EMBEDDING_MODEL}
+            - **LLM Model**: gemma2-9b-it (via Groq)
+            - **API Status**: {'🟢 Online' if self._check_api_health() else '🔴 Offline'}
+            """)
+        
+    def _check_api_health(self) -> bool:
+        """Check if the API is healthy."""
+        try:
+            response = requests.get(f"{API_BASE_URL}/health")
+            return response.status_code == 200
+        except:
+            return False
         
     def render_search_section(self):
         """Render the search and query section."""

@@ -11,8 +11,8 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
-import ollama
 from storage_indexing import Document, StorageManager
+from groq_client import create_groq_client
 
 # Configure logging
 logging.basicConfig(
@@ -50,17 +50,18 @@ class RetrievalQA:
     def __init__(
         self,
         storage_manager: StorageManager,
-        model_name: str = "reader-lm:1.5b",
+        model_name: str = "gemma2-9b-it",
         max_tokens: int = 1000,
         temperature: float = 0.7,
-        top_k: int = 3
+        top_k: int = 3,
+        **kwargs
     ):
         """
         Initialize the RetrievalQA system.
         
         Args:
             storage_manager: Instance of StorageManager for vector DB operations
-            model_name: Name of the LLM model to use
+            model_name: Name of the Groq model to use
             max_tokens: Maximum tokens for LLM response
             temperature: LLM temperature parameter
             top_k: Number of documents to retrieve
@@ -70,7 +71,11 @@ class RetrievalQA:
         self.max_tokens = max_tokens
         self.temperature = temperature
         self.top_k = top_k
-        self.llm = ollama.Client()
+        self.llm = create_groq_client(
+            model_name=model_name,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
         
         logger.info(f"Initialized RetrievalQA with model: {model_name}")
         
@@ -170,21 +175,16 @@ Context from relevant documents:
         prompt = self._construct_prompt(query, documents)
         
         try:
-            # Generate answer using LLM
-            response = self.llm.generate(
-                model=self.model_name,
-                prompt=prompt
-                # temperature=self.temperature,
-                # max_tokens=self.max_tokens
-            )
+            # Generate answer using Groq
+            response = self.llm.generate_text(prompt)
             
             # Create QA response
             qa_response = QAResponse(
-                answer=response.response.strip(),
+                answer=response["text"].strip(),
                 sources=documents,
-                prompt_tokens=response.prompt_eval_count,
-                completion_tokens=response.eval_count,
-                total_tokens=response.prompt_eval_count + response.eval_count
+                prompt_tokens=response["usage"]["prompt_tokens"],
+                completion_tokens=response["usage"]["completion_tokens"],
+                total_tokens=response["usage"]["total_tokens"]
             )
             
             logger.info(
@@ -250,9 +250,9 @@ def create_retrieval_qa(
     """
     return RetrievalQA(
         storage_manager=storage_manager,
-        model_name=kwargs.get("model_name", "reader-lm:1.5b"),
+        model_name=kwargs.get("model_name", "gemma2-9b-it"),
         max_tokens=kwargs.get("max_tokens", 1000),
-        temperature=kwargs.get("temperature", 0.6),
+        temperature=kwargs.get("temperature", 0.7),
         top_k=kwargs.get("top_k", 3)
     )
 

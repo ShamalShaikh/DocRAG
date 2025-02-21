@@ -23,6 +23,7 @@ from storage_indexing import create_storage_manager
 from retrieval_qa import create_retrieval_qa
 from web_scraper import create_default_scraper
 from html_to_markdown_converter import create_converter
+from groq_client import create_groq_client
 
 # Configure logging with more detailed format and file handler
 logging.basicConfig(
@@ -45,6 +46,8 @@ class Settings(BaseSettings):
     pinecone_index_name: str = "rag-demo"
     pinecone_cloud: str = "aws"
     pinecone_region: str = "us-east-1"
+    groq_api_key: str
+    groq_model_name: str = "gemma2-9b-it"
     cors_origins: List[str] = ["http://localhost:8501", "http://localhost:3000", "http://127.0.0.1:8501"]
     debug_mode: bool = False
     log_level: str = "INFO"
@@ -57,6 +60,12 @@ class Settings(BaseSettings):
 
 # Create settings instance at module level
 settings = Settings()
+
+# Global variables for components
+storage_manager = None
+qa_system = None
+scraper = None
+converter = None
 
 def initialize_components(settings: Settings):
     """
@@ -86,9 +95,13 @@ def initialize_components(settings: Settings):
         components["storage_manager"] = storage_manager
         logger.info("Storage manager initialized successfully")
         
-        # Initialize QA system
-        logger.info("Initializing QA system...")
-        qa_system = create_retrieval_qa(storage_manager)
+        # Initialize QA system with Groq
+        logger.info("Initializing QA system with Groq...")
+        qa_system = create_retrieval_qa(
+            storage_manager=storage_manager,
+            model_name=settings.groq_model_name,
+            api_key=settings.groq_api_key
+        )
         components["qa_system"] = qa_system
         logger.info("QA system initialized successfully")
         
@@ -98,9 +111,11 @@ def initialize_components(settings: Settings):
         components["scraper"] = scraper
         logger.info("Web scraper initialized successfully")
 
-        # Initialize HTML to Markdown converter
-        logger.info("Initializing HTML to Markdown converter...")
-        converter = create_converter()
+        # Initialize HTML to Markdown converter with Groq
+        logger.info("Initializing HTML to Markdown converter with Groq...")
+        converter = create_converter(
+            model_name=settings.groq_model_name
+        )
         components["converter"] = converter
         logger.info("HTML to Markdown converter initialized successfully")
         
@@ -115,32 +130,6 @@ def initialize_components(settings: Settings):
         error_msg = f"Failed to initialize {failed_component}: {str(e)}"
         logger.error(error_msg, exc_info=True)
         raise RuntimeError(error_msg)
-
-# Initialize FastAPI app
-app = FastAPI(
-    title="RAG System API",
-    description="API for web scraping, document processing, and question answering",
-    version="1.0.0"
-)
-
-# Add CORS middleware immediately after creating the app
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=settings.cors_origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-@app.exception_handler(Exception)
-async def global_exception_handler(request, exc):
-    """Global exception handler for unhandled errors."""
-    error_msg = f"Unhandled error: {str(exc)}"
-    logger.error(error_msg, exc_info=True)
-    return JSONResponse(
-        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        content={"detail": error_msg}
-    )
 
 # Replace on_event handlers with lifespan context manager
 @asynccontextmanager
@@ -164,7 +153,8 @@ async def lifespan(app: FastAPI):
     finally:
         # Shutdown: Cleanup resources
         logger.info("Shutting down application...")
-        # Add cleanup code here if needed
+        if scraper:
+            scraper.stop_scheduler()
 
 # Update FastAPI app to use the lifespan context manager
 app = FastAPI(
@@ -173,6 +163,25 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan
 )
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request, exc):
+    """Global exception handler for unhandled errors."""
+    error_msg = f"Unhandled error: {str(exc)}"
+    logger.error(error_msg, exc_info=True)
+    return JSONResponse(
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        content={"detail": error_msg}
+    )
 
 # Request/Response Models
 class ScrapingTarget(BaseModel):
@@ -284,7 +293,7 @@ async def start_scraping(
     4. Optionally schedules recurring scraping
     
     Args:
-        target: Scraping target configuration
+        target: ScrapingTarget configuration
         
     Returns:
         ScrapingStatus: Status of the created scraping job
@@ -292,38 +301,97 @@ async def start_scraping(
     Raises:
         HTTPException: If scraping or processing fails
     """
+    from fastapi import status  # Import status at the top of the function
+    
     try:
+        # Verify that scraper is initialized
+        if not scraper:
+            raise RuntimeError("Web scraper not initialized")
+            
         logger.info(f"Starting scraping job for URL: {target.url}")
         job_id = f"job_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         
         # Process and store the document immediately
-        doc_id = await process_and_store_url(
-            url=str(target.url),
-            metadata=target.metadata
-        )
-        
-        # Schedule future scraping if requested
-        next_run = None
-        if target.schedule:
-            logger.info(f"Scheduling scraping job {job_id} with schedule: {target.schedule}")
-            scraper.schedule_scraping(
-                task=scraper.scrape_html,
-                interval=3600,  # Convert schedule to interval
-                url=str(target.url)
+        try:
+            # Step 1: Scrape HTML content
+            logger.info(f"Scraping content from URL: {target.url}")
+            html_content = await scraper.scrape_html(str(target.url))
+            if not html_content:
+                raise ValueError(f"No content retrieved from URL: {target.url}")
+            
+            # Step 2: Clean and chunk HTML content if needed
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Remove unnecessary elements that might inflate token count
+            for tag in soup.find_all(['script', 'style', 'meta', 'link', 'noscript']):
+                tag.decompose()
+            
+            # Get main content area if possible
+            main_content = soup.find('main') or soup.find('article') or soup.find('body')
+            if main_content:
+                html_content = str(main_content)
+            else:
+                html_content = str(soup)
+                
+            # Step 3: Convert HTML to Markdown
+            logger.info("Converting HTML to Markdown")
+            if not converter:
+                raise RuntimeError("HTML to Markdown converter not initialized")
+            conversion_result = converter.convert(html_content)
+            
+            # Step 4: Prepare metadata
+            doc_metadata = {
+                "url": str(target.url),
+                "processed_at": datetime.now().isoformat(),
+                **(target.metadata or {}),  # Include any provided metadata
+                **(conversion_result.get("metadata", {}))  # Include metadata from conversion
+            }
+            
+            # Remove any None values from metadata
+            doc_metadata = {k: v for k, v in doc_metadata.items() if v is not None}
+            
+            # Step 5: Store in vector database
+            logger.info("Storing document in vector database")
+            if not storage_manager:
+                raise RuntimeError("Storage manager not initialized")
+            doc_id = storage_manager.process_and_store_document(
+                content=conversion_result["markdown"],
+                metadata=doc_metadata
             )
-            next_run = datetime.now()
-        
-        status = ScrapingStatus(
-            job_id=job_id,
-            url=target.url,
-            status="scheduled" if target.schedule else "completed",
-            last_run=datetime.now(),
-            next_run=next_run
-        )
-        
-        logger.info(f"Created scraping job: {status.dict()}, Document ID: {doc_id}")
-        return status
-        
+            
+            logger.info(f"Successfully stored document with ID: {doc_id}")
+            
+            # Schedule future scraping if requested
+            next_run = None
+            if target.schedule:
+                logger.info(f"Scheduling scraping job {job_id} with schedule: {target.schedule}")
+                scraper.schedule_scraping(
+                    task=scraper.scrape_html,
+                    interval=3600,  # Convert schedule to interval
+                    url=str(target.url)
+                )
+                next_run = datetime.now()
+            
+            status = ScrapingStatus(
+                job_id=job_id,
+                url=target.url,
+                status="scheduled" if target.schedule else "completed",
+                last_run=datetime.now(),
+                next_run=next_run
+            )
+            
+            logger.info(f"Created scraping job: {status.dict()}, Document ID: {doc_id}")
+            return status
+            
+        except Exception as e:
+            error_msg = f"Processing failed: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=error_msg
+            )
+            
     except Exception as e:
         error_msg = f"Scraping failed: {str(e)}"
         logger.error(error_msg, exc_info=True)
@@ -447,6 +515,62 @@ async def get_system_stats():
         
     except Exception as e:
         error_msg = f"Failed to get stats: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=error_msg
+        )
+
+@app.get("/api/health")
+async def health_check():
+    """
+    Health check endpoint that verifies core system components.
+    
+    Returns:
+        Dict: Status of each component
+    """
+    try:
+        logger.debug("Starting health check")
+        status = {
+            "api": "healthy",
+            "database": False,
+            "embedding_model": False,
+            "llm": False
+        }
+        
+        # Test database (Pinecone)
+        logger.debug("Testing vector database...")
+        try:
+            storage_manager.vector_db.index.describe_index_stats()
+            status["database"] = True
+            logger.info("Vector database check passed")
+        except Exception as e:
+            logger.error(f"Vector database check failed: {str(e)}")
+        
+        # Test embedding model
+        logger.debug("Testing embedding model...")
+        try:
+            storage_manager.generate_embedding("test")
+            status["embedding_model"] = True
+            logger.info("Embedding model check passed")
+        except Exception as e:
+            logger.error(f"Embedding model check failed: {str(e)}")
+        
+        # Test LLM (Groq)
+        logger.debug("Testing Groq LLM...")
+        try:
+            llm = create_groq_client()
+            llm.generate_text("test")
+            status["llm"] = True
+            logger.info("LLM check passed")
+        except Exception as e:
+            logger.error(f"LLM check failed: {str(e)}")
+        
+        logger.info("Health check completed")
+        return status
+        
+    except Exception as e:
+        error_msg = f"Health check failed: {str(e)}"
         logger.error(error_msg, exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

@@ -29,7 +29,7 @@ Key benefits:
 
 - Robust PDF text extraction using PyMuPDF
 - Smart text chunking with context preservation
-- High-quality embeddings using BAAI/bge-base-en-v1.5
+- High-quality embeddings using all-MiniLM-L6-v2
 - Persistent vector storage with ChromaDB
 - Natural language queries using Deepseek
 - Automatic duplicate content detection
@@ -123,7 +123,7 @@ CHUNK_OVERLAP = 50
 ### Embedding Model Settings
 ```python
 # generate_embeddings.py
-MODEL_NAME = "BAAI/bge-base-en-v1.5"
+MODEL_NAME = "all-MiniLM-L6-v2"
 CACHE_DIR = "./cache"
 ```
 
