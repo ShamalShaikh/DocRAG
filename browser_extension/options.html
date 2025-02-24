@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAG Assistant Settings</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    .status {
+      margin-top: 16px;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RAG Assistant Settings</h1>
+    
+    <form id="settingsForm">
+      <div class="form-group">
+        <label for="apiUrl">API URL:</label>
+        <input type="text" id="apiUrl" placeholder="http://localhost:8000/api">
+        <small>Example: http://localhost:8000/api or your public API endpoint</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="maxResults">Maximum Results:</label>
+        <input type="number" id="maxResults" min="1" max="10" value="3">
+        <small>Number of sources to display (1-10)</small>
+      </div>
+      
+      <button type="submit">Save Settings</button>
+    </form>
+    
+    <div id="status" class="status" style="display: none;"></div>
+  </div>
+  
+  <script src="js/options.js"></script>
+</body>
+</html> 

@@ -167,7 +167,7 @@ app = FastAPI(
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=[*settings.cors_origins, "chrome-extension://*"],  # Allow requests from Chrome extensions
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -223,6 +223,12 @@ class AnnotationResponse(BaseModel):
     status: str
     message: str
     annotation_id: Optional[str] = None
+
+class EmbeddingsResponse(BaseModel):
+    """Model for embeddings response."""
+    embeddings: List[List[float]]
+    metadata: List[Dict[str, Any]]
+    last_updated: datetime
 
 # API Endpoints
 async def process_and_store_url(url: str, metadata: Optional[Dict[str, Any]] = None) -> str:
@@ -319,12 +325,12 @@ async def start_scraping(
             if not html_content:
                 raise ValueError(f"No content retrieved from URL: {target.url}")
             
-            # Step 2: Clean and chunk HTML content if needed
+            # Step 2: Clean and chunk HTML content
             from bs4 import BeautifulSoup
             soup = BeautifulSoup(html_content, 'html.parser')
             
             # Remove unnecessary elements that might inflate token count
-            for tag in soup.find_all(['script', 'style', 'meta', 'link', 'noscript']):
+            for tag in soup.find_all(['script', 'style', 'meta', 'link', 'noscript', 'iframe', 'nav', 'footer']):
                 tag.decompose()
             
             # Get main content area if possible
@@ -340,27 +346,59 @@ async def start_scraping(
                 raise RuntimeError("HTML to Markdown converter not initialized")
             conversion_result = converter.convert(html_content)
             
-            # Step 4: Prepare metadata
+            # Step 4: Prepare metadata (limit size)
             doc_metadata = {
                 "url": str(target.url),
                 "processed_at": datetime.now().isoformat(),
-                **(target.metadata or {}),  # Include any provided metadata
-                **(conversion_result.get("metadata", {}))  # Include metadata from conversion
+                "title": conversion_result.get("metadata", {}).get("title", "") or "",
+                "author": conversion_result.get("metadata", {}).get("author", "") or "",
+                "publication_date": conversion_result.get("metadata", {}).get("publication_date", "") or "",
+                "word_count": conversion_result.get("metadata", {}).get("word_count", 0),
+                "tags": conversion_result.get("tags", [])[:5] if conversion_result.get("tags") else []  # Limit to top 5 tags
             }
             
-            # Remove any None values from metadata
-            doc_metadata = {k: v for k, v in doc_metadata.items() if v is not None}
+            # Add any provided metadata, but limit size and ensure no null values
+            if target.metadata:
+                for key, value in target.metadata.items():
+                    if value is not None and len(str(value)) <= 1000:  # Limit individual metadata values
+                        doc_metadata[key] = value
             
-            # Step 5: Store in vector database
+            # Step 5: Store in vector database with chunking if content is too large
             logger.info("Storing document in vector database")
             if not storage_manager:
                 raise RuntimeError("Storage manager not initialized")
-            doc_id = storage_manager.process_and_store_document(
-                content=conversion_result["markdown"],
-                metadata=doc_metadata
-            )
+                
+            markdown_content = conversion_result["markdown"]
+            # Split content into smaller chunks if too large (roughly 2000 words per chunk)
+            chunks = []
+            words = markdown_content.split()
+            chunk_size = 2000
+            for i in range(0, len(words), chunk_size):
+                chunk = " ".join(words[i:i + chunk_size])
+                chunks.append(chunk)
             
-            logger.info(f"Successfully stored document with ID: {doc_id}")
+            # Store each chunk with the same metadata but different chunk numbers
+            doc_ids = []
+            for i, chunk in enumerate(chunks):
+                chunk_metadata = {
+                    **doc_metadata,
+                    "chunk_number": i + 1,
+                    "total_chunks": len(chunks)
+                }
+                try:
+                    doc_id = storage_manager.process_and_store_document(
+                        content=chunk,
+                        metadata=chunk_metadata
+                    )
+                    doc_ids.append(doc_id)
+                except Exception as e:
+                    logger.error(f"Failed to store chunk {i+1}: {str(e)}")
+                    continue
+            
+            if not doc_ids:
+                raise RuntimeError("Failed to store any document chunks")
+            
+            logger.info(f"Successfully stored {len(doc_ids)} chunks")
             
             # Schedule future scraping if requested
             next_run = None
@@ -381,7 +419,7 @@ async def start_scraping(
                 next_run=next_run
             )
             
-            logger.info(f"Created scraping job: {status.dict()}, Document ID: {doc_id}")
+            logger.info(f"Created scraping job: {status.dict()}, Document IDs: {doc_ids}")
             return status
             
         except Exception as e:
@@ -440,6 +478,12 @@ async def query(request: QueryRequest):
         HTTPException: If query processing fails
     """
     try:
+        if not qa_system:
+            raise RuntimeError("QA system not initialized")
+            
+        if not request.query.strip():
+            raise ValueError("Query cannot be empty")
+            
         logger.info(f"Processing query: {request.query}")
         response = qa_system.query(
             query=request.query,
@@ -459,12 +503,32 @@ async def query(request: QueryRequest):
         logger.info(f"Query processed successfully. Total tokens: {response.total_tokens}")
         return result
         
+    except ValueError as e:
+        error_msg = str(e)
+        logger.warning(f"Invalid query: {error_msg}")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=error_msg
+        )
+    except RuntimeError as e:
+        error_msg = str(e)
+        logger.error(f"System error: {error_msg}")
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"Service temporarily unavailable: {error_msg}"
+        )
     except Exception as e:
-        error_msg = f"Query failed: {str(e)}"
-        logger.error(error_msg, exc_info=True)
+        error_msg = str(e)
+        if "context_length_exceeded" in error_msg.lower():
+            logger.warning("Context length exceeded, try a more specific query")
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Your query returned too much context. Please try a more specific question."
+            )
+        logger.error(f"Query failed: {error_msg}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=error_msg
+            detail=f"Failed to process query: {error_msg}"
         )
 
 @app.post("/api/annotate", response_model=AnnotationResponse)
@@ -571,6 +635,34 @@ async def health_check():
         
     except Exception as e:
         error_msg = f"Health check failed: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=error_msg
+        )
+
+@app.get("/api/embeddings", response_model=EmbeddingsResponse)
+async def get_embeddings():
+    """
+    Retrieve all document embeddings and their metadata.
+    
+    Returns:
+        EmbeddingsResponse: Object containing embeddings, metadata, and last update timestamp
+        
+    Raises:
+        HTTPException: If retrieval fails
+    """
+    try:
+        logger.info("Fetching document embeddings")
+        embeddings, metadata = storage_manager.get_all_embeddings()
+        
+        return EmbeddingsResponse(
+            embeddings=embeddings,
+            metadata=metadata,
+            last_updated=datetime.now()
+        )
+    except Exception as e:
+        error_msg = f"Failed to retrieve embeddings: {str(e)}"
         logger.error(error_msg, exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

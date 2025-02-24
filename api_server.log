@@ -2209,3 +2209,1111 @@ groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large 
 2025-02-20 18:40:26,042 - api_server - INFO - [api_server.py:459] - Query processed successfully. Total tokens: 1681
 2025-02-20 18:40:26,053 - api_server - INFO - [api_server.py:505] - Collecting system statistics
 2025-02-20 18:40:26,053 - api_server - INFO - [api_server.py:513] - Statistics collected successfully
+2025-02-24 00:01:25,713 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:01:29,308 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:01:29,308 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:01:34,995 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:01:34,995 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:01:35,028 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:01:35,028 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:01:35,032 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:01:35,032 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:01:35,050 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:01:35,050 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:01:51,582 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:01:53,968 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:01:53,968 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:01:57,873 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:01:57,873 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:01:57,914 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:01:57,914 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:01:57,916 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:01:57,916 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:01:57,935 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:01:57,935 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:02:44,662 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:02:47,219 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:02:47,219 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:02:51,054 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:02:51,054 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:02:51,101 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:02:51,101 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:02:51,108 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:02:51,108 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:02:51,127 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:02:51,127 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:03:14,775 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:03:17,410 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:03:17,410 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:03:22,292 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:03:22,292 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:03:22,328 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:03:22,328 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:03:22,330 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:03:22,330 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:03:22,347 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:03:22,347 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:03:44,718 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:03:47,154 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:03:47,154 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:03:50,981 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:03:50,981 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:03:51,017 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:03:51,017 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:03:51,022 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:03:51,022 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:03:51,041 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:03:51,041 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:04:31,335 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:04:33,945 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:04:33,946 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:04:38,444 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:04:38,444 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:04:38,485 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:04:38,485 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:04:38,490 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:04:38,490 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:04:38,508 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:04:38,508 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:05:36,369 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:05:38,895 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:05:38,895 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:05:44,007 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:05:44,008 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:05:44,057 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:05:44,058 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:05:44,062 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:05:44,062 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:05:44,081 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:05:44,081 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:05:46,142 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:05:46,142 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:05:48,673 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:05:48,673 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:05:48,708 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:05:48,708 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:05:48,709 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:05:48,709 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:05:48,727 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:05:48,727 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:06:59,953 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:07:09,964 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:07:09,964 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:07:15,165 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:07:15,165 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:07:15,252 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:07:15,252 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:07:15,259 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:07:15,259 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:07:15,294 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:07:15,294 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:07:26,236 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:07:26,731 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:07:27,210 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:07:27,210 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:07:42,907 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:07:43,186 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:07:43,435 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:07:43,435 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:07:43,466 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-24 00:07:43,466 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-24 00:07:43,762 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 00:07:44,045 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 00:07:44,286 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_000744
+2025-02-24 00:07:44,288 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_000743', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 0, 7, 44, 286866), 'next_run': None, 'error': None}, Document ID: doc_20250224_000744
+2025-02-24 00:08:34,296 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:08:39,140 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:08:39,140 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:08:42,849 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:08:42,849 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:08:42,892 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:08:42,892 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:08:42,896 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:08:42,896 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:08:42,914 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:08:42,914 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:08:46,857 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:08:49,075 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:08:49,075 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:08:53,074 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:08:53,074 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:08:53,107 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:08:53,107 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:08:53,109 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:08:53,109 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:08:53,132 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:08:53,132 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:09:05,990 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:09:08,675 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:09:08,675 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:09:10,873 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:09:10,873 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:09:10,916 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:09:10,916 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:09:10,918 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:09:10,918 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:09:10,937 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:09:10,937 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:09:32,978 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:09:47,270 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:09:48,042 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:09:48,511 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:09:48,511 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:09:48,525 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:00,743 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:01,007 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:01,297 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:01,297 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:01,322 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-24 00:10:01,322 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/
+2025-02-24 00:10:01,510 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 00:10:01,761 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 00:10:01,989 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_001001
+2025-02-24 00:10:01,989 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_001001', 'url': HttpUrl('https://shamalshaikh.github.io/ShamalBlog/posts/FastAPI-LLM-Integration/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 0, 10, 1, 989152), 'next_run': None, 'error': None}, Document ID: doc_20250224_001001
+2025-02-24 00:10:01,994 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:07,530 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:07,719 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:07,979 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:07,980 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:07,985 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/airbnbs.html
+2025-02-24 00:10:07,985 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/airbnbs.html
+2025-02-24 00:10:08,398 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 00:10:10,784 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 00:10:10,981 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_001010
+2025-02-24 00:10:10,981 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_001007', 'url': HttpUrl('https://www.paulgraham.com/airbnbs.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 0, 10, 10, 981370), 'next_run': None, 'error': None}, Document ID: doc_20250224_001010
+2025-02-24 00:10:10,987 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:16,708 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:17,039 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:17,488 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:17,488 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:17,514 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:29,186 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:29,339 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:29,608 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:29,608 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:29,620 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:32,634 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:32,667 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:32,920 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:32,921 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:32,933 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/foundermode.html
+2025-02-24 00:10:32,933 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/foundermode.html
+2025-02-24 00:10:33,051 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 00:10:35,467 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 00:10:35,796 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_001035
+2025-02-24 00:10:35,797 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_001032', 'url': HttpUrl('https://www.paulgraham.com/foundermode.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 0, 10, 35, 796403), 'next_run': None, 'error': None}, Document ID: doc_20250224_001035
+2025-02-24 00:10:35,806 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:41,978 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:42,196 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:42,418 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:42,421 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:42,426 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:51,607 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:51,842 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:52,079 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:52,079 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:52,089 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:53,968 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:54,069 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:54,366 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:54,366 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:54,373 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:56,361 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:56,411 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:56,640 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:56,640 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:56,653 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:10:59,068 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:10:59,130 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:10:59,358 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:10:59,358 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:10:59,371 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:19,455 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:19,686 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:19,927 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:19,927 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:19,931 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:24,631 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:24,684 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:24,935 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:24,936 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:24,949 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:29,248 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:29,306 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:29,502 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:29,502 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:29,514 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:32,394 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:32,440 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:32,695 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:32,695 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:32,708 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:46,507 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:46,704 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:46,980 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:46,980 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:46,985 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:11:58,702 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:11:58,969 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:11:59,220 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:11:59,220 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:11:59,233 - api_server - INFO - [api_server.py:449] - Processing query: tell me about founder
+2025-02-24 00:12:00,698 - api_server - INFO - [api_server.py:465] - Query processed successfully. Total tokens: 3551
+2025-02-24 00:12:00,720 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:12:23,622 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:12:23,806 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:12:24,067 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:12:24,068 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:12:24,079 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:14:24,351 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:14:27,645 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:14:27,645 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:14:31,685 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:14:31,685 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:14:31,718 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:14:31,718 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:14:31,725 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:14:31,725 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:14:31,746 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:14:31,746 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:14:46,207 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:14:48,784 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:14:48,784 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:14:50,652 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:14:50,652 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:14:50,686 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:14:50,686 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:14:50,688 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:14:50,688 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:14:50,706 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:14:50,706 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:15:54,301 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:15:56,917 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:15:56,917 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:16:01,599 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:16:01,600 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:16:01,642 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:16:01,642 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:16:01,647 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:16:01,647 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:16:01,665 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:16:01,665 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:16:12,249 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:16:15,034 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:16:15,034 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:16:19,148 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:16:19,148 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:16:19,201 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:16:19,201 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:16:19,203 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:16:19,203 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:16:19,223 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:16:19,223 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:16:21,390 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:16:21,390 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:16:25,647 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:16:25,648 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:16:25,690 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:16:25,690 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:16:25,692 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:16:25,693 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:16:25,711 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:16:25,711 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:16:49,542 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:16:50,129 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:16:50,408 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:16:50,409 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:16:50,425 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:17:08,202 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:17:08,444 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:17:08,775 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:17:08,775 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:17:08,791 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:17:18,192 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:17:18,400 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:17:18,717 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:17:18,717 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:17:18,728 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:17:22,891 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:17:22,931 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:17:23,244 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:17:23,245 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:17:23,259 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:17:27,587 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:17:27,637 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:17:27,918 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:17:27,918 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:17:27,924 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:18:14,006 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:18:14,281 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:18:14,575 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:18:14,575 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:18:14,584 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:18:23,955 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:18:24,245 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:18:24,503 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:18:24,504 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:18:24,512 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:18:35,073 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:18:35,171 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:18:35,392 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:18:35,392 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:18:35,405 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:25:19,518 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:25:22,553 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:25:22,553 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:25:24,897 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:25:24,897 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:25:24,936 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:25:24,936 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:25:24,941 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:25:24,941 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:25:24,959 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:25:24,959 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:25:41,542 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:25:43,955 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:25:43,955 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:25:47,813 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:25:47,813 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:25:47,850 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:25:47,851 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:25:47,852 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:25:47,852 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:25:47,870 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:25:47,870 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:26:05,370 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:26:07,848 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:26:07,848 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:26:09,593 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:26:09,593 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:26:09,638 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:26:09,638 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:26:09,640 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:26:09,640 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:26:09,659 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:26:09,659 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:26:32,732 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:26:35,182 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:26:35,182 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:26:37,342 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:26:37,342 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:26:37,393 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:26:37,393 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:26:37,397 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:26:37,397 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:26:37,417 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:26:37,417 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:26:47,053 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:26:47,560 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:26:48,126 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:26:48,126 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:26:48,135 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:27:01,720 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:27:01,894 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:27:02,142 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:27:02,143 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:27:02,149 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:28:30,062 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:28:32,793 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:28:32,793 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:28:38,279 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:28:38,279 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:28:38,311 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:28:38,311 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:28:38,315 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:28:38,315 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:28:38,333 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:28:38,333 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:28:43,790 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:28:46,615 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:28:46,615 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:28:48,465 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:28:48,465 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:28:48,494 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:28:48,494 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:28:48,496 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:28:48,496 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:28:48,524 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:28:48,524 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:28:51,150 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:28:51,155 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:28:54,982 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:28:54,982 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:28:55,037 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:28:55,037 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:28:55,039 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:28:55,039 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:28:55,059 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:28:55,059 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:28:56,737 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:28:56,737 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:28:59,362 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:28:59,362 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:28:59,412 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:28:59,412 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:28:59,413 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:28:59,413 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:28:59,433 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:28:59,433 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:28:59,790 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:29:00,082 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:29:00,323 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:29:00,323 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:29:00,335 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:56:51,507 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:56:54,774 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:56:54,774 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:56:59,551 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:56:59,551 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:56:59,592 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:56:59,592 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:56:59,597 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:56:59,597 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:56:59,616 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:56:59,616 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:57:13,205 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 00:57:16,029 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 00:57:16,029 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 00:57:19,738 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 00:57:19,738 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 00:57:19,837 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 00:57:19,838 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 00:57:19,841 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 00:57:19,842 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 00:57:19,866 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 00:57:19,866 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 00:57:55,641 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:57:56,342 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:57:56,851 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:57:56,851 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:57:56,882 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:58:09,865 - api_server - INFO - [api_server.py:449] - Processing query: What is the reddits?
+2025-02-24 00:58:10,465 - api_server - ERROR - [api_server.py:470] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 18672, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 450, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 235, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 179, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 18672, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-24 00:58:12,828 - api_server - INFO - [api_server.py:449] - Processing query: What is the reddits?
+2025-02-24 00:58:13,050 - api_server - ERROR - [api_server.py:470] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 18672, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 450, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 235, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 179, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 18672, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-24 00:58:21,604 - api_server - INFO - [api_server.py:449] - Processing query: What is this?
+2025-02-24 00:58:22,161 - api_server - ERROR - [api_server.py:470] - Query failed: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 17684, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 450, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 235, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 179, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `gemma2-9b-it` in organization `org_01je4vwrhbe3et489jccdhyz66` service tier `on_demand` on tokens per minute (TPM): Limit 15000, Requested 17684, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2025-02-24 00:58:30,108 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:58:30,299 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:58:30,556 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:58:30,556 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:58:57,862 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:58:58,144 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:58:58,380 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:58:58,380 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:59:06,520 - api_server - INFO - [api_server.py:552] - Vector database check passed
+2025-02-24 00:59:06,787 - api_server - INFO - [api_server.py:561] - Embedding model check passed
+2025-02-24 00:59:07,032 - api_server - INFO - [api_server.py:571] - LLM check passed
+2025-02-24 00:59:07,032 - api_server - INFO - [api_server.py:575] - Health check completed
+2025-02-24 00:59:07,038 - api_server - INFO - [api_server.py:598] - Fetching document embeddings
+2025-02-24 00:59:16,478 - api_server - INFO - [api_server.py:449] - Processing query: Chcekc
+2025-02-24 00:59:17,078 - api_server - ERROR - [api_server.py:470] - Query failed: Error code: 400 - {'error': {'message': 'Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 450, in query
+    response = qa_system.query(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 235, in query
+    return self.generate_answer(query, documents)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/retrieval_qa.py", line 179, in generate_answer
+    response = self.llm.generate_text(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/groq_client.py", line 88, in generate_text
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/resources/chat/completions.py", line 322, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1266, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 958, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/anaconda3/lib/python3.11/site-packages/groq/_base_client.py", line 1061, in _request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-02-24 01:00:07,788 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:00:10,506 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:00:10,506 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:00:15,654 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:00:15,654 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:00:15,696 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:00:15,696 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:00:15,701 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:00:15,701 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:00:15,719 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:00:15,719 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:00:29,581 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:00:32,229 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:00:32,229 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:00:36,998 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:00:36,998 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:00:37,044 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:00:37,045 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:00:37,046 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:00:37,046 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:00:37,065 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:00:37,065 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:00:52,121 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:00:52,609 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:00:52,897 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:00:52,897 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:00:52,904 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:00:56,610 - api_server - INFO - [api_server.py:455] - Processing query: Check this article
+2025-02-24 01:00:57,002 - api_server - INFO - [api_server.py:471] - Query processed successfully. Total tokens: 883
+2025-02-24 01:00:57,013 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:01:05,634 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:01:05,874 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:01:06,159 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:01:06,159 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:01:06,169 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:01:12,752 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:01:12,855 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:01:13,094 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:01:13,094 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:01:13,099 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:01:18,615 - api_server - INFO - [api_server.py:455] - Processing query: Can you tell me about reddits
+2025-02-24 01:01:19,564 - api_server - INFO - [api_server.py:471] - Query processed successfully. Total tokens: 885
+2025-02-24 01:01:19,573 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:07:40,103 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:07:42,846 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:07:42,846 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:07:48,236 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:07:48,236 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:07:48,278 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:07:48,278 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:07:48,282 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:07:48,282 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:07:48,305 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:07:48,305 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:08:18,046 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:08:18,654 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:08:19,003 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:08:19,003 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:08:19,012 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:08:51,318 - api_server - INFO - [api_server.py:455] - Processing query: Check this and tell me about reddits
+2025-02-24 01:08:52,227 - api_server - INFO - [api_server.py:471] - Query processed successfully. Total tokens: 1181
+2025-02-24 01:08:52,234 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:08:55,917 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:08:56,228 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:08:56,453 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:08:56,453 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:09:16,025 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:09:16,289 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:09:16,580 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:09:16,580 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:09:16,593 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:12:10,126 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:12:10,451 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:12:10,820 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:12:10,820 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:12:10,943 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:12:11,540 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/reddits.html
+2025-02-24 01:12:11,540 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/reddits.html
+2025-02-24 01:12:12,099 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:12:14,587 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:12:15,343 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_011214
+2025-02-24 01:12:15,348 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_011211', 'url': HttpUrl('https://www.paulgraham.com/reddits.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 1, 12, 15, 343761), 'next_run': None, 'error': None}, Document ID: doc_20250224_011214
+2025-02-24 01:12:30,361 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:12:30,520 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:12:30,805 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:12:30,805 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:12:30,818 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:12:50,717 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:12:50,944 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:12:51,190 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:12:51,190 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:12:51,200 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/reddits.html
+2025-02-24 01:12:51,200 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/reddits.html
+2025-02-24 01:12:51,317 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:12:53,733 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:12:53,941 - api_server - INFO - [api_server.py:369] - Successfully stored document with ID: doc_20250224_011253
+2025-02-24 01:12:53,942 - api_server - INFO - [api_server.py:390] - Created scraping job: {'job_id': 'job_20250224_011251', 'url': HttpUrl('https://www.paulgraham.com/reddits.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 1, 12, 53, 941528), 'next_run': None, 'error': None}, Document ID: doc_20250224_011253
+2025-02-24 01:12:53,947 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:13:02,252 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:13:02,490 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:13:02,728 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:13:02,729 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:13:02,765 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:13:08,461 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:13:08,566 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:13:08,843 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:13:08,843 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:13:08,851 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:13:17,585 - api_server - INFO - [api_server.py:455] - Processing query: tell me about the reddits
+2025-02-24 01:13:18,494 - api_server - INFO - [api_server.py:471] - Query processed successfully. Total tokens: 977
+2025-02-24 01:13:18,506 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:13:43,251 - api_server - INFO - [api_server.py:578] - Vector database check passed
+2025-02-24 01:13:43,496 - api_server - INFO - [api_server.py:587] - Embedding model check passed
+2025-02-24 01:13:43,772 - api_server - INFO - [api_server.py:597] - LLM check passed
+2025-02-24 01:13:43,772 - api_server - INFO - [api_server.py:601] - Health check completed
+2025-02-24 01:13:43,775 - api_server - INFO - [api_server.py:624] - Fetching document embeddings
+2025-02-24 01:13:45,061 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:13:45,061 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:13:45,287 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:13:45,943 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:13:46,255 - api_server - ERROR - [api_server.py:395] - Processing failed: Failed to store document doc_20250224_011345
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011345
+2025-02-24 01:13:46,267 - api_server - ERROR - [api_server.py:403] - Scraping failed: 500: Processing failed: Failed to store document doc_20250224_011345
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011345
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 396, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250224_011345
+2025-02-24 01:13:51,173 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:13:51,174 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:13:51,386 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:13:52,004 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:13:52,656 - api_server - ERROR - [api_server.py:395] - Processing failed: Failed to store document doc_20250224_011352
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011352
+2025-02-24 01:13:52,658 - api_server - ERROR - [api_server.py:403] - Scraping failed: 500: Processing failed: Failed to store document doc_20250224_011352
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 396, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250224_011352
+2025-02-24 01:14:08,693 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:14:08,694 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:14:09,012 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:14:09,645 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:14:10,156 - api_server - ERROR - [api_server.py:395] - Processing failed: Failed to store document doc_20250224_011409
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011409
+2025-02-24 01:14:10,156 - api_server - ERROR - [api_server.py:403] - Scraping failed: 500: Processing failed: Failed to store document doc_20250224_011409
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011409
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 396, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250224_011409
+2025-02-24 01:14:14,767 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:14:14,767 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:14:15,044 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:14:15,633 - api_server - INFO - [api_server.py:361] - Storing document in vector database
+2025-02-24 01:14:16,086 - api_server - ERROR - [api_server.py:395] - Processing failed: Failed to store document doc_20250224_011415
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011415
+2025-02-24 01:14:16,087 - api_server - ERROR - [api_server.py:403] - Scraping failed: 500: Processing failed: Failed to store document doc_20250224_011415
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 364, in start_scraping
+    doc_id = storage_manager.process_and_store_document(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shamalshaikh/VScode/RAG_project/storage_indexing.py", line 399, in process_and_store_document
+    raise RuntimeError(f"Failed to store document {doc_id}")
+RuntimeError: Failed to store document doc_20250224_011415
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 396, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store document doc_20250224_011415
+2025-02-24 01:15:29,673 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:15:33,962 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:15:33,962 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:15:36,082 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:15:36,082 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:15:36,125 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:15:36,125 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:15:36,129 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:15:36,130 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:15:36,149 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:15:36,149 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:16:16,435 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:16:19,285 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:16:19,285 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:16:23,250 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:16:23,250 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:16:23,300 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:16:23,300 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:16:23,304 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:16:23,304 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:16:23,323 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:16:23,323 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:16:58,002 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:17:00,258 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:17:00,258 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:17:04,576 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:17:04,577 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:17:04,626 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:17:04,626 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:17:04,628 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:17:04,628 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:17:04,648 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:17:04,648 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:17:07,594 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:17:07,594 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:17:08,089 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:17:08,749 - api_server - INFO - [api_server.py:367] - Storing document in vector database
+2025-02-24 01:17:09,731 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 1: Failed to store document doc_20250224_011708
+2025-02-24 01:17:09,838 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 2: Failed to store document doc_20250224_011709
+2025-02-24 01:17:09,937 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 3: Failed to store document doc_20250224_011709
+2025-02-24 01:17:10,072 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 4: Failed to store document doc_20250224_011709
+2025-02-24 01:17:10,161 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 5: Failed to store document doc_20250224_011710
+2025-02-24 01:17:10,254 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 6: Failed to store document doc_20250224_011710
+2025-02-24 01:17:10,254 - api_server - ERROR - [api_server.py:427] - Processing failed: Failed to store any document chunks
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 399, in start_scraping
+    raise RuntimeError("Failed to store any document chunks")
+RuntimeError: Failed to store any document chunks
+2025-02-24 01:17:10,255 - api_server - ERROR - [api_server.py:435] - Scraping failed: 500: Processing failed: Failed to store any document chunks
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 399, in start_scraping
+    raise RuntimeError("Failed to store any document chunks")
+RuntimeError: Failed to store any document chunks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 428, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store any document chunks
+2025-02-24 01:17:14,298 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:17:14,298 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:17:14,473 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:17:15,108 - api_server - INFO - [api_server.py:367] - Storing document in vector database
+2025-02-24 01:17:15,637 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 1: Failed to store document doc_20250224_011715
+2025-02-24 01:17:15,727 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 2: Failed to store document doc_20250224_011715
+2025-02-24 01:17:15,817 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 3: Failed to store document doc_20250224_011715
+2025-02-24 01:17:15,899 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 4: Failed to store document doc_20250224_011715
+2025-02-24 01:17:15,997 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 5: Failed to store document doc_20250224_011715
+2025-02-24 01:17:16,088 - api_server - ERROR - [api_server.py:395] - Failed to store chunk 6: Failed to store document doc_20250224_011715
+2025-02-24 01:17:16,088 - api_server - ERROR - [api_server.py:427] - Processing failed: Failed to store any document chunks
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 399, in start_scraping
+    raise RuntimeError("Failed to store any document chunks")
+RuntimeError: Failed to store any document chunks
+2025-02-24 01:17:16,089 - api_server - ERROR - [api_server.py:435] - Scraping failed: 500: Processing failed: Failed to store any document chunks
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 399, in start_scraping
+    raise RuntimeError("Failed to store any document chunks")
+RuntimeError: Failed to store any document chunks
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shamalshaikh/VScode/RAG_project/api_server.py", line 428, in start_scraping
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 500: Processing failed: Failed to store any document chunks
+2025-02-24 01:18:03,291 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:18:05,575 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:18:05,575 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:18:08,718 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:18:08,718 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:18:08,763 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:18:08,763 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:18:08,765 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:18:08,765 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:18:08,785 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:18:08,785 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:18:18,698 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:18:22,273 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:18:22,273 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:18:25,709 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:18:25,709 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:18:25,758 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:18:25,758 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:18:25,760 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:18:25,760 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:18:25,780 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:18:25,780 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:18:26,045 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:18:26,046 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/greatwork.html
+2025-02-24 01:18:26,474 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:18:27,030 - api_server - INFO - [api_server.py:367] - Storing document in vector database
+2025-02-24 01:18:28,735 - api_server - INFO - [api_server.py:401] - Successfully stored 6 chunks
+2025-02-24 01:18:28,736 - api_server - INFO - [api_server.py:422] - Created scraping job: {'job_id': 'job_20250224_011826', 'url': HttpUrl('https://www.paulgraham.com/greatwork.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 1, 18, 28, 735467), 'next_run': None, 'error': None}, Document IDs: ['doc_20250224_011827', 'doc_20250224_011827', 'doc_20250224_011828', 'doc_20250224_011828', 'doc_20250224_011828', 'doc_20250224_011828']
+2025-02-24 01:19:58,536 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:20:00,866 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:20:00,866 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:20:04,385 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:20:04,385 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:20:04,428 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:20:04,428 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:20:04,430 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:20:04,430 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:20:04,449 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:20:04,449 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:20:06,286 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:20:06,287 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:20:10,550 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:20:10,551 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:20:10,596 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:20:10,596 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:20:10,598 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:20:10,598 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:20:10,616 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:20:10,616 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:20:13,987 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:20:17,043 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:20:17,044 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:20:18,849 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:20:18,849 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:20:18,914 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:20:18,914 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:20:18,918 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:20:18,918 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:20:18,935 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:20:18,935 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:20:36,026 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:20:39,447 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:20:39,447 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:20:44,568 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:20:44,569 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:20:44,608 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:20:44,608 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:20:44,611 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:20:44,611 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:20:44,629 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:20:44,630 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:21:46,551 - api_server - INFO - [api_server.py:155] - Shutting down application...
+2025-02-24 01:21:49,151 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:21:49,151 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:21:55,531 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:21:55,531 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:21:55,602 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:21:55,602 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:21:55,633 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:21:55,633 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:21:55,649 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:21:55,649 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:21:57,798 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:21:57,798 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:22:00,488 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:22:00,488 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:22:00,521 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:22:00,521 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:22:00,522 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:22:00,522 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:22:00,543 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:22:00,543 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:22:02,355 - api_server - INFO - [api_server.py:144] - Starting application initialization...
+2025-02-24 01:22:02,355 - api_server - INFO - [api_server.py:86] - Initializing storage manager with Pinecone...
+2025-02-24 01:22:06,456 - api_server - INFO - [api_server.py:96] - Storage manager initialized successfully
+2025-02-24 01:22:06,457 - api_server - INFO - [api_server.py:99] - Initializing QA system with Groq...
+2025-02-24 01:22:06,507 - api_server - INFO - [api_server.py:106] - QA system initialized successfully
+2025-02-24 01:22:06,507 - api_server - INFO - [api_server.py:109] - Initializing web scraper...
+2025-02-24 01:22:06,509 - api_server - INFO - [api_server.py:112] - Web scraper initialized successfully
+2025-02-24 01:22:06,509 - api_server - INFO - [api_server.py:115] - Initializing HTML to Markdown converter with Groq...
+2025-02-24 01:22:06,529 - api_server - INFO - [api_server.py:120] - HTML to Markdown converter initialized successfully
+2025-02-24 01:22:06,529 - api_server - INFO - [api_server.py:147] - Application initialization completed successfully
+2025-02-24 01:22:06,982 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:22:07,290 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:22:07,720 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:22:07,720 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:22:07,743 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:22:45,063 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:22:45,367 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:22:45,631 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:22:45,631 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:22:45,638 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:24:53,456 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:24:53,776 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:24:54,311 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:24:54,311 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:24:54,353 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:25:03,941 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:25:04,234 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:25:04,454 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:25:04,454 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:25:04,458 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:26:25,721 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:26:25,999 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:26:26,251 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:26:26,251 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:26:26,261 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:29:20,016 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:29:20,634 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:29:21,063 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:29:21,063 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:29:21,068 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:31:26,721 - api_server - INFO - [api_server.py:487] - Processing query: Can you tell me about how to do great work/
+2025-02-24 01:31:28,311 - api_server - INFO - [api_server.py:503] - Query processed successfully. Total tokens: 1026
+2025-02-24 01:31:28,331 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:31:35,893 - api_server - INFO - [api_server.py:487] - Processing query: Can you tell me about how to do great work?
+2025-02-24 01:31:36,618 - api_server - INFO - [api_server.py:503] - Query processed successfully. Total tokens: 1033
+2025-02-24 01:31:36,628 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:32:37,911 - api_server - INFO - [api_server.py:487] - Processing query: Can you tell me about how to do great work? Elaborate on the lying part
+2025-02-24 01:32:39,272 - api_server - INFO - [api_server.py:503] - Query processed successfully. Total tokens: 1077
+2025-02-24 01:32:39,290 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:33:36,826 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:33:37,218 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:33:37,645 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:33:37,645 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:33:37,655 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:33:55,380 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:33:55,638 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:33:55,880 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:33:55,880 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:33:55,883 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:33:56,956 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.paulgraham.com/words.html
+2025-02-24 01:33:56,956 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.paulgraham.com/words.html
+2025-02-24 01:33:57,373 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:33:59,906 - api_server - INFO - [api_server.py:367] - Storing document in vector database
+2025-02-24 01:34:00,287 - api_server - INFO - [api_server.py:401] - Successfully stored 1 chunks
+2025-02-24 01:34:00,302 - api_server - INFO - [api_server.py:422] - Created scraping job: {'job_id': 'job_20250224_013356', 'url': HttpUrl('https://www.paulgraham.com/words.html'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 1, 34, 0, 287248), 'next_run': None, 'error': None}, Document IDs: ['doc_20250224_013359']
+2025-02-24 01:34:11,607 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:34:11,832 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:34:12,103 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:34:12,103 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:34:12,117 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:34:20,712 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:34:20,987 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:34:21,348 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:34:21,348 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:34:21,360 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:40:57,195 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:40:57,890 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:40:58,344 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:40:58,344 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:40:58,371 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:40:58,780 - api_server - INFO - [api_server.py:317] - Starting scraping job for URL: https://www.reddit.com/r/reinforcementlearning/
+2025-02-24 01:40:58,780 - api_server - INFO - [api_server.py:323] - Scraping content from URL: https://www.reddit.com/r/reinforcementlearning/
+2025-02-24 01:41:00,030 - api_server - INFO - [api_server.py:344] - Converting HTML to Markdown
+2025-02-24 01:41:00,296 - api_server - INFO - [api_server.py:367] - Storing document in vector database
+2025-02-24 01:41:00,545 - api_server - INFO - [api_server.py:401] - Successfully stored 1 chunks
+2025-02-24 01:41:00,548 - api_server - INFO - [api_server.py:422] - Created scraping job: {'job_id': 'job_20250224_014058', 'url': HttpUrl('https://www.reddit.com/r/reinforcementlearning/'), 'status': 'completed', 'last_run': datetime.datetime(2025, 2, 24, 1, 41, 0, 545336), 'next_run': None, 'error': None}, Document IDs: ['doc_20250224_014100']
+2025-02-24 01:41:13,605 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:41:13,806 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:41:14,156 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:41:14,156 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:41:14,229 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:41:29,685 - api_server - INFO - [api_server.py:487] - Processing query: Can you tell me about reinforcement learning from reddit group?
+2025-02-24 01:41:30,987 - api_server - INFO - [api_server.py:503] - Query processed successfully. Total tokens: 1117
+2025-02-24 01:41:30,992 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:42:09,952 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:42:10,129 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:42:10,372 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:42:10,372 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:42:10,391 - api_server - INFO - [api_server.py:656] - Fetching document embeddings
+2025-02-24 01:42:51,133 - api_server - INFO - [api_server.py:610] - Vector database check passed
+2025-02-24 01:42:51,549 - api_server - INFO - [api_server.py:619] - Embedding model check passed
+2025-02-24 01:42:51,799 - api_server - INFO - [api_server.py:629] - LLM check passed
+2025-02-24 01:42:51,799 - api_server - INFO - [api_server.py:633] - Health check completed
+2025-02-24 01:42:51,807 - api_server - INFO - [api_server.py:487] - Processing query: Can you tell me about reinforcement learning in reddit?
+2025-02-24 01:42:53,240 - api_server - INFO - [api_server.py:503] - Query processed successfully. Total tokens: 1504
+2025-02-24 01:42:53,249 - api_server - INFO - [api_server.py:656] - Fetching document embeddings

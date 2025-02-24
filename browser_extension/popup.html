@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG System Assistant</title>
+  <link rel="stylesheet" href="css/popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+  <style>
+    button {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Color Emoji', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RAG Assistant</h1>
+    
+    <div class="action-buttons">
+      <button id="scrapePage" class="action-btn">📥 Save Current Page</button>
+    </div>
+
+    <div class="scraping-status" id="scrapingStatus" style="display: none;">
+      <div class="spinner"></div>
+      <p>Processing page...</p>
+    </div>
+    
+    <div class="query-section">
+      <textarea id="queryInput" placeholder="Enter your question..."></textarea>
+      <button id="searchButton">Search</button>
+    </div>
+
+    <div class="results-section">
+      <div id="loadingSpinner" class="spinner" style="display: none;">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+      
+      <div id="answer" class="answer-box"></div>
+      
+      <div id="sources" class="sources-section"></div>
+      
+      <div id="visualization" class="viz-section">
+        <!-- Visualization will be loaded here -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="settingsButton" class="settings-btn">⚙️ Settings</button>
+      <span id="statusIndicator" class="status-indicator">●</span>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html> 

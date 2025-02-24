@@ -9,7 +9,7 @@ import json
 import logging
 import os
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -18,6 +18,11 @@ import requests
 from sentence_transformers import SentenceTransformer
 import streamlit as st
 from dotenv import load_dotenv
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+import umap
+from plotly.graph_objects import Figure
+import plotly.graph_objects as go
 
 # Load environment variables
 load_dotenv()
@@ -30,8 +35,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constants
-API_BASE_URL = "http://127.0.0.1:8000/api"
+API_BASE_URL = "http://127.0.0.1:8000/api"  # Base URL already includes /api
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Using a standard embedding model
+DIMENSION_REDUCTION_METHODS = {
+    "PCA": "Principal Component Analysis",
+    "t-SNE": "t-Distributed Stochastic Neighbor Embedding",
+    "UMAP": "Uniform Manifold Approximation and Projection"
+}
 
 class RAGDashboard:
     """
@@ -55,6 +65,10 @@ class RAGDashboard:
         # Initialize session state
         if "annotations" not in st.session_state:
             st.session_state.annotations = {}
+        if "embeddings_cache" not in st.session_state:
+            st.session_state.embeddings_cache = None
+        if "last_update" not in st.session_state:
+            st.session_state.last_update = None
             
         # Check for API key
         if not os.getenv("GROQ_API_KEY"):
@@ -237,48 +251,213 @@ class RAGDashboard:
             st.error(f"Error loading scraping targets: {str(e)}")
             
     def render_visualization_section(self):
-        """Render the data visualization section."""
+        """Render the document embeddings visualization section."""
         st.header("Data Visualization")
         
         try:
-            # Get system stats
-            stats = requests.get(f"{API_BASE_URL}/stats").json()
+            # Fetch embeddings data
+            response = requests.get(f"{API_BASE_URL}/embeddings")  # API_BASE_URL already includes /api
+            response.raise_for_status()
+            data = response.json()
             
-            # Display stats
+            # Display metrics
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.metric("Total Documents", stats["total_documents"])
+                st.metric("Total Documents", len(data["embeddings"]))
             with col2:
-                st.metric("Total Embeddings", stats["total_embeddings"])
+                st.metric("Total Embeddings", len(data["embeddings"]))
             with col3:
-                st.metric("Last Update", stats["last_update"])
+                st.metric("Last Updated", data["last_updated"])
                 
-            # Embedding visualization
             st.subheader("Document Embeddings")
             st.info(
-                "This visualization shows document clusters based on their embeddings. "
-                "Similar documents appear closer together."
+                "This visualization shows the relationships between documents in the vector space. "
+                "Similar documents appear closer together in the plot."
             )
             
-            # TODO: Implement actual embedding visualization
-            # For now, show dummy plot
-            df = pd.DataFrame({
-                'x': np.random.randn(50),
-                'y': np.random.randn(50),
-                'cluster': np.random.choice(['A', 'B', 'C'], 50)
-            })
-            
-            fig = px.scatter(
-                df,
-                x='x',
-                y='y',
-                color='cluster',
-                title='Document Embedding Clusters'
-            )
-            st.plotly_chart(fig)
+            # Visualization controls
+            col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
+            with col1:
+                reduction_method = st.selectbox(
+                    "Dimension Reduction Method",
+                    options=list(DIMENSION_REDUCTION_METHODS.keys()),
+                    format_func=lambda x: DIMENSION_REDUCTION_METHODS[x]
+                )
+            with col2:
+                use_3d = st.checkbox("3D Plot", value=False)
+            with col3:
+                perplexity = st.slider("Perplexity", 5, 50, 30) if reduction_method == "t-SNE" else None
+            with col4:
+                if st.button("Refresh Data"):
+                    st.session_state.embeddings_cache = None
+                    
+            if data["embeddings"]:
+                # Convert embeddings to numpy array
+                embeddings_array = np.array(data["embeddings"])
+                
+                # Perform dimension reduction
+                if reduction_method == "PCA":
+                    reducer = PCA(n_components=3 if use_3d else 2)
+                elif reduction_method == "t-SNE":
+                    reducer = TSNE(
+                        n_components=3 if use_3d else 2,
+                        perplexity=perplexity,
+                        random_state=42
+                    )
+                else:  # UMAP
+                    reducer = umap.UMAP(
+                        n_components=3 if use_3d else 2,
+                        random_state=42
+                    )
+                
+                reduced_embeddings = reducer.fit_transform(embeddings_array)
+                
+                # Create interactive plot
+                if use_3d:
+                    # Determine coloring based on metadata
+                    colors = []
+                    color_labels = []
+                    for meta in data["metadata"]:
+                        # Try to use category/tag if available
+                        if "category" in meta:
+                            colors.append(meta["category"])
+                            color_labels.append(f"Category: {meta['category']}")
+                        elif "tags" in meta and meta["tags"]:
+                            colors.append(meta["tags"][0])  # Use first tag
+                            color_labels.append(f"Tag: {meta['tags'][0]}")
+                        elif "processed_at" in meta:
+                            # Convert timestamp to age in days
+                            try:
+                                processed_time = datetime.fromisoformat(meta["processed_at"])
+                                age_days = (datetime.now() - processed_time).days
+                                colors.append(age_days)
+                                color_labels.append(f"Age: {age_days} days")
+                            except:
+                                colors.append(0)
+                                color_labels.append("Age: Unknown")
+                        else:
+                            colors.append(0)
+                            color_labels.append("No category")
+
+                    fig = go.Figure(data=[
+                        go.Scatter3d(
+                            x=reduced_embeddings[:, 0],
+                            y=reduced_embeddings[:, 1],
+                            z=reduced_embeddings[:, 2],
+                            mode='markers',
+                            marker=dict(
+                                size=6,
+                                color=colors,
+                                colorscale='Viridis',
+                                showscale=True,
+                                colorbar=dict(
+                                    title="Document Category" if isinstance(colors[0], str) else "Document Age (days)"
+                                )
+                            ),
+                            text=[
+                                f"Title: {m.get('title', 'Untitled')}<br>"
+                                f"Preview: {m.get('content_preview', '')}<br>"
+                                f"{label}"
+                                for m, label in zip(data["metadata"], color_labels)
+                            ],
+                            hoverinfo='text'
+                        )
+                    ])
+                    fig.update_layout(
+                        scene=dict(
+                            xaxis_title="Component 1",
+                            yaxis_title="Component 2",
+                            zaxis_title="Component 3"
+                        ),
+                        title=f"Document Embeddings ({reduction_method})"
+                    )
+                else:
+                    # Determine coloring based on metadata (same as 3D case)
+                    colors = []
+                    color_labels = []
+                    for meta in data["metadata"]:
+                        # Try to use category/tag if available
+                        if "category" in meta:
+                            colors.append(meta["category"])
+                            color_labels.append(f"Category: {meta['category']}")
+                        elif "tags" in meta and meta["tags"]:
+                            colors.append(meta["tags"][0])  # Use first tag
+                            color_labels.append(f"Tag: {meta['tags'][0]}")
+                        elif "processed_at" in meta:
+                            # Convert timestamp to age in days
+                            try:
+                                processed_time = datetime.fromisoformat(meta["processed_at"])
+                                age_days = (datetime.now() - processed_time).days
+                                colors.append(age_days)
+                                color_labels.append(f"Age: {age_days} days")
+                            except:
+                                colors.append(0)
+                                color_labels.append("Age: Unknown")
+                        else:
+                            colors.append(0)
+                            color_labels.append("No category")
+
+                    fig = go.Figure(data=[
+                        go.Scatter(
+                            x=reduced_embeddings[:, 0],
+                            y=reduced_embeddings[:, 1],
+                            mode='markers',
+                            marker=dict(
+                                size=8,
+                                color=colors,
+                                colorscale='Viridis',
+                                showscale=True,
+                                colorbar=dict(
+                                    title="Document Category" if isinstance(colors[0], str) else "Document Age (days)"
+                                )
+                            ),
+                            text=[
+                                f"Title: {m.get('title', 'Untitled')}<br>"
+                                f"Preview: {m.get('content_preview', '')}<br>"
+                                f"{label}"
+                                for m, label in zip(data["metadata"], color_labels)
+                            ],
+                            hoverinfo='text'
+                        )
+                    ])
+                    fig.update_layout(
+                        xaxis_title="Component 1",
+                        yaxis_title="Component 2",
+                        title=f"Document Embeddings ({reduction_method})"
+                    )
+                
+                st.plotly_chart(fig, use_container_width=True)
+                
+                # Show cluster statistics
+                if st.checkbox("Show Cluster Statistics"):
+                    # Calculate document counts by category/tag
+                    categories = {}
+                    for meta in data["metadata"]:
+                        for tag in meta.get("tags", []):
+                            categories[tag] = categories.get(tag, 0) + 1
+                    
+                    # Create bar chart
+                    if categories:
+                        fig = go.Figure(data=[
+                            go.Bar(
+                                x=list(categories.keys()),
+                                y=list(categories.values())
+                            )
+                        ])
+                        fig.update_layout(
+                            title="Documents per Category",
+                            xaxis_title="Category",
+                            yaxis_title="Number of Documents"
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+                    else:
+                        st.info("No category information available in metadata")
+            else:
+                st.warning("No embeddings available for visualization")
             
         except Exception as e:
-            st.error(f"Error loading visualizations: {str(e)}")
+            st.error(f"Error loading visualization: {str(e)}")
+            logger.error(f"Visualization error: {str(e)}", exc_info=True)
             
     def add_scraping_target(
         self,
@@ -352,6 +531,152 @@ class RAGDashboard:
             
         except Exception as e:
             st.error(f"Error saving annotation: {str(e)}")
+            
+    def _fetch_embeddings(self) -> Tuple[np.ndarray, List[Dict], datetime]:
+        """
+        Fetch document embeddings from the vector database.
+        
+        Returns:
+            Tuple containing:
+            - numpy.ndarray: Matrix of embeddings
+            - List[Dict]: Document metadata
+            - datetime: Last update timestamp
+        """
+        try:
+            # Get embeddings from API
+            response = requests.get(f"{API_BASE_URL}/embeddings")
+            response.raise_for_status()
+            data = response.json()
+            
+            # Extract embeddings and metadata
+            embeddings = np.array([doc["embedding"] for doc in data["documents"]])
+            metadata = [
+                {
+                    "id": doc["id"],
+                    "title": doc["metadata"].get("title", "Untitled"),
+                    "url": doc["metadata"].get("url", ""),
+                    "date": doc["metadata"].get("publication_date", ""),
+                    "cluster": doc["metadata"].get("cluster", "Unknown")
+                }
+                for doc in data["documents"]
+            ]
+            
+            last_update = datetime.fromisoformat(data["last_update"])
+            return embeddings, metadata, last_update
+            
+        except Exception as e:
+            logger.error(f"Error fetching embeddings: {str(e)}")
+            raise
+            
+    def _reduce_dimensions(
+        self,
+        embeddings: np.ndarray,
+        method: str = "UMAP",
+        n_components: int = 2
+    ) -> np.ndarray:
+        """
+        Reduce embedding dimensions for visualization.
+        
+        Args:
+            embeddings: High-dimensional embeddings
+            method: Dimension reduction method ("PCA", "t-SNE", or "UMAP")
+            n_components: Number of dimensions to reduce to (2 or 3)
+            
+        Returns:
+            numpy.ndarray: Reduced-dimension embeddings
+        """
+        if method == "PCA":
+            reducer = PCA(n_components=n_components)
+        elif method == "t-SNE":
+            reducer = TSNE(
+                n_components=n_components,
+                random_state=42,
+                perplexity=min(30, len(embeddings) - 1)
+            )
+        else:  # UMAP
+            reducer = umap.UMAP(
+                n_components=n_components,
+                random_state=42,
+                min_dist=0.1,
+                n_neighbors=min(15, len(embeddings) - 1)
+            )
+            
+        return reducer.fit_transform(embeddings)
+        
+    def _create_embedding_plot(
+        self,
+        reduced_embeddings: np.ndarray,
+        metadata: List[Dict],
+        plot_3d: bool = False
+    ) -> Figure:
+        """
+        Create an interactive embedding visualization.
+        
+        Args:
+            reduced_embeddings: Dimension-reduced embeddings
+            metadata: Document metadata for each embedding
+            plot_3d: Whether to create a 3D plot
+            
+        Returns:
+            plotly.graph_objects.Figure: Interactive plot
+        """
+        # Create DataFrame for plotting
+        df = pd.DataFrame(
+            reduced_embeddings,
+            columns=[f"Dimension {i+1}" for i in range(reduced_embeddings.shape[1])]
+        )
+        df["Title"] = [m["title"] for m in metadata]
+        df["URL"] = [m["url"] for m in metadata]
+        df["Date"] = [m["date"] for m in metadata]
+        df["Cluster"] = [m["cluster"] for m in metadata]
+        
+        # Create hover text
+        df["Hover Text"] = df.apply(
+            lambda row: f"Title: {row['Title']}<br>"
+                       f"Date: {row['Date']}<br>"
+                       f"Cluster: {row['Cluster']}",
+            axis=1
+        )
+        
+        if plot_3d:
+            fig = px.scatter_3d(
+                df,
+                x="Dimension 1",
+                y="Dimension 2",
+                z="Dimension 3",
+                color="Cluster",
+                hover_data=["Title", "Date"],
+                title="Document Embedding Clusters (3D)",
+                template="plotly_dark"
+            )
+        else:
+            fig = px.scatter(
+                df,
+                x="Dimension 1",
+                y="Dimension 2",
+                color="Cluster",
+                hover_data=["Title", "Date"],
+                title="Document Embedding Clusters",
+                template="plotly_dark"
+            )
+            
+        # Update layout for better interactivity
+        fig.update_traces(
+            marker=dict(size=10),
+            hovertemplate="%{customdata[0]}<br>"
+                         "Date: %{customdata[1]}<br>"
+                         "Cluster: %{marker.color}<br>"
+                         "<extra></extra>"
+        )
+        
+        fig.update_layout(
+            height=600,
+            showlegend=True,
+            legend_title_text="Clusters",
+            hovermode="closest"
+        )
+        
+        return fig
             
     def render(self):
         """Render the complete dashboard."""

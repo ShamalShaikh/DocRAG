@@ -62,6 +62,21 @@ class VectorDBInterface(ABC):
         """Delete documents from the vector database."""
         pass
 
+    @abstractmethod
+    def get_all_embeddings(self) -> Tuple[List[List[float]], List[Dict[str, Any]]]:
+        """
+        Retrieve all stored embeddings and their metadata.
+        
+        Returns:
+            Tuple containing:
+            - List of embedding vectors
+            - List of metadata dictionaries
+            
+        Raises:
+            RuntimeError: If index is not initialized
+        """
+        pass
+
 class PineconeDB(VectorDBInterface):
     """Pinecone vector database implementation."""
     
@@ -86,6 +101,7 @@ class PineconeDB(VectorDBInterface):
         self.index_name = index_name
         self.namespace = namespace
         self.index = None
+        self.dimension = None  # Store dimension as instance variable
         
     def initialize(self, dimension: int) -> None:
         """
@@ -94,6 +110,7 @@ class PineconeDB(VectorDBInterface):
         Args:
             dimension: Dimension of the embedding vectors
         """
+        self.dimension = dimension  # Store dimension when initializing
         
         # Initialize Pinecone client
         pc = Pinecone(api_key=self.api_key)
@@ -222,6 +239,64 @@ class PineconeDB(VectorDBInterface):
         except Exception as e:
             logger.error(f"Error deleting documents from Pinecone: {str(e)}")
             return False
+
+    def get_all_embeddings(self) -> Tuple[List[List[float]], List[Dict[str, Any]]]:
+        """
+        Retrieve all stored embeddings and their metadata.
+        
+        Returns:
+            Tuple containing:
+            - List of embedding vectors
+            - List of metadata dictionaries
+            
+        Raises:
+            RuntimeError: If index is not initialized
+        """
+        if not self.index:
+            raise RuntimeError("Index not initialized")
+            
+        try:
+            # Get total vector count and dimension from index stats
+            stats = self.index.describe_index_stats()
+            total_vectors = stats.total_vector_count
+            
+            if not self.dimension:
+                # Try to get dimension from index configuration
+                self.dimension = stats.dimension
+                
+            if not self.dimension:
+                raise RuntimeError("Vector dimension not available")
+            
+            # Initialize result lists
+            embeddings = []
+            metadata_list = []
+            
+            # Fetch vectors in batches of 1000
+            batch_size = 1000
+            for i in range(0, total_vectors, batch_size):
+                # Query vectors using pagination
+                query_response = self.index.query(
+                    vector=[0.0] * self.dimension,  # Dummy vector for pagination
+                    top_k=min(batch_size, total_vectors - i),
+                    include_metadata=True,
+                    include_values=True,
+                    namespace=self.namespace
+                )
+                
+                for match in query_response.matches:
+                    embeddings.append(match.values)
+                    # Extract content from metadata and keep the rest
+                    metadata = dict(match.metadata)
+                    content = metadata.pop("content", "")
+                    metadata["content_preview"] = content[:200]  # Store preview for UI
+                    metadata_list.append(metadata)
+            
+            logger.info(f"Successfully retrieved {len(embeddings)} embeddings")
+            return embeddings, metadata_list
+            
+        except Exception as e:
+            logger.error(f"Error fetching embeddings from Pinecone: {str(e)}")
+            return [], []
 
 class StorageManager:
     """
@@ -354,6 +429,23 @@ class StorageManager:
             top_k=top_k,
             filter_criteria=filter_criteria
         )
+
+    def get_all_embeddings(self) -> Tuple[List[List[float]], List[Dict[str, Any]]]:
+        """
+        Retrieve all stored embeddings and their metadata.
+        
+        Returns:
+            Tuple containing:
+            - List of embedding vectors
+            - List of metadata dictionaries
+            
+        Raises:
+            RuntimeError: If no vector database is configured
+        """
+        if not self.vector_db:
+            raise RuntimeError("No vector database configured")
+            
+        return self.vector_db.get_all_embeddings()
 
 def create_storage_manager(
     vector_db_type: str = "pinecone",

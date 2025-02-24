@@ -22,3 +22,5 @@ plotly>=5.20.0  # For data visualization
 pandas>=2.2.0  # For data manipulation
 groq     # For Groq API integration
 python-dotenv>=1.0.0  # For environment variable management
+scikit-learn>=1.4.0  # For PCA and t-SNE
+umap-learn>=0.5.5  # For UMAP dimension reduction

@@ -143,12 +143,29 @@ Context from relevant documents:
 
 """
         
-        # Add retrieved documents
+        # Add retrieved documents with length limits
+        total_content_length = 0
+        max_content_length = 4000  # Conservative limit for Groq's context window
+        
         for i, doc in enumerate(documents, 1):
-            prompt += f"\nDocument {i}:\n"
-            prompt += f"Title: {doc.metadata.get('title', 'Untitled')}\n"
-            prompt += f"Content:\n{doc.content}\n"
-            prompt += "-" * 80 + "\n"
+            # Calculate content chunk size
+            content = doc.content
+            if len(content) > 1000:  # Truncate long documents
+                content = content[:1000] + "... [truncated]"
+            
+            # Check if adding this document would exceed the limit
+            chunk = f"\nDocument {i}:\n"
+            chunk += f"Title: {doc.metadata.get('title', 'Untitled')}\n"
+            chunk += f"Content:\n{content}\n"
+            chunk += "-" * 80 + "\n"
+            
+            if total_content_length + len(chunk) > max_content_length:
+                # Add a note about truncation and break
+                prompt += "\n[Note: Some documents were omitted due to length constraints]\n"
+                break
+                
+            prompt += chunk
+            total_content_length += len(chunk)
             
         # Add the query
         prompt += f"\nQuestion: {query}\n\n"
